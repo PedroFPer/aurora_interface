@@ -1,0 +1,89 @@
+@charset"utf-8";
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.produto{
+    width: 50%;
+    height: 200%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #000;
+    
+  
+}
+.opn{
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sel{
+    margin-top: 400%;
+    margin-bottom: 100%;
+}
+
+.lixo{
+    width: 100%;
+    height: 50%;
+    
+}
+
+#quantidade{
+    width: 20%;
+    height: 10%;
+    border: 1px solid #dfdfdf;
+    background: none;
+    margin: 2%;
+    
+}
+
+.img{
+    
+    width: 20%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    margin: 2%;
+}
+
+.btn{
+    width: 40%;
+    height: 10%;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);   
+    background: none;
+    margin: 2%;
+    
+    
+}
+
+.separador{
+    width: 100%;
+    height: 100px;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.pag{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.resumo{
+    width: 50%;
+    height: 300%;
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+}
+
+.btn-comprar{ }
