@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
-    <link rel="stylesheet" href="carrinho.css">
+    <link rel="stylesheet" href="styles/styles_especificos/carrinho.css">
 </head>
 <body>
     <header></header>
@@ -25,16 +25,28 @@
                             
                         </div>
                         <div class="img">
-                            <h1>foto</h1>
+                            
 
                         </div>
                         <div class="descricao">
-                            <h2>Nome do Produto</h2>
-                            <button type="button" class="btn">Cor</button>
-                            <button type="button" class="btn">Tamanho</button>
+                            <h2>Vestido curto branco com recortes cut-out</h2>
+                            <select name="btn" id="cor" class="option">
+                                    <option value="selecione">Cor</option>
+                                    <option value="branco">Branco</option>
+                                    <option value="preto">Preto</option>
+                                    <option value="azul">Azul</option>
+                                    <option value="vermelho">Vermelho</option>
+                            </select>
                             
+                            <select name="btn" id="Tamanho" class="option">
+                                    <option value="selecione">Tamanho</option>
+                                    <option value="pp">PP</option>
+                                    <option value="p">P</option>
+                                    <option value="m">M</option>
+                                    <option value="g">G</option>
+                            </select>
                             
-                            Quantidade <input type="number" name="quantidade" id="quantidade" min="1" max="10" value="1">
+                            <p>Quantidade <input type="number" name="quantidade" id="quantidade" class="qtd" min="1" max="100" value="1"> </p>
                             <p>R$ 99,99</p>
 
                         </div>
@@ -43,19 +55,19 @@
                     <div class="resumo">
                         <h2>Resumo do pedido</h2>
                         <div class="pag">
-                            <div class="pgm">
+                            <div class="detalhes">
                             
                                 <h2>Produtos</h2>
                                 <h2>Total</h2>
         
                             </div>
                             <div class="price">
-                                <h2>price</h2>
-                                <h2>price</h2>
+                                <h2>410,00</h2>
+                                <h2>410,00</h2>
                             </div>
 
                         </div>
-                        <button class="btn-comprar">Comprar</button>
+                        <button class="btn-comprar">Continuar</button>
                         
 
                     </div>
