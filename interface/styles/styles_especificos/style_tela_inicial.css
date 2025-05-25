@@ -13,6 +13,8 @@ main{
     flex-direction: row;
 
     flex-wrap: wrap;
+
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -72,6 +74,119 @@ main{
 .conteiner_patrocinadores img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+
+.title_secao figure{
+    width: 18%;
+    height: 38%;
+
+    margin-right: auto;
+    margin-top: 1em;
+
+    margin: 1em auto 0em 3em ;
+}
+
+.title_secao img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.conteiner_secao_em_alta{
+    height: 28em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    list-style: none;
+
+    gap: 6em;
+    
+    flex-wrap: wrap;
+
+    margin: 0.2em 0 3em 0;
+}
+
+.conteiner_secao_em_alta li{
+    height: 95%;
+
+    margin: 0%;
+    padding: 0%;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.conteiner_imagem_produto {
+    height: 17em;
+}
+
+.conteiner_imagem_produto figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.conteiner_imagem_produto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: top center;
+
+    border-radius: 0; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.conteiner_descricao_produto_em_alta{
+    margin: 1.5em 0.5em 1em 0.5em;
+    
+    font-size: large;
+    font-weight: 900;
+
+    gap: 1em;
+
+    flex-wrap: wrap;
+}
+
+.conteiner_nome_produto_em_alta{
+    height: 4em;
+
+    margin: auto;
+}
+
+.conteiner_preco_produto_em_alta{
+    height: 2em;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.conteiner_preco_produto_em_alta p{
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.conteiner_preco_produto_em_alta figure{
+    width: 13%;
+    height: 33;
+
+    margin-left: auto;
+    margin-top: 1em;
+}
+
+.conteiner_preco_produto_em_alta img{
+    width: 100%;
+    height: 100%;
+
     object-fit: cover;
 }
 
