@@ -3,13 +3,12 @@
 
 
 body{
-    color: white;
-    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
 
 footer{
+    
     width: 100%;
     height: auto;
 
@@ -23,6 +22,9 @@ footer{
     padding: 3em;
 
     flex-wrap: wrap;
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
 
 }
 
