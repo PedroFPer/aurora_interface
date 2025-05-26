@@ -145,8 +145,8 @@ header {
     opacity: 0.6;
 }
 
-.pop_up_usuario_padrao {
-    height: 16.8em;
+.pop_up_usuario_deslogado {
+    height: auto;
 
     display: flex;
     align-items: center;
@@ -167,14 +167,13 @@ header {
     z-index: 1000;
 }
 
-
-.pop_up_usuario_padrao p {
+.pop_up_usuario_deslogado p {
 
     text-align: center;
     font-size: 1.1em;
 }
 
-.pop_up_usuario_padrao button {
+.pop_up_usuario_deslogado button {
     width: 16em;
     height: 3em;
 
@@ -183,6 +182,74 @@ header {
     color: white;
     background-color: black;
 
+}
+
+.pop_up_usuario_deslogado figure{
+    width: 18%;
+    height: 18%;
+}
+
+.pop_up_usuario_deslogado img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.pop_up_carrinho{
+     left: 60%;
+}
+
+.pop_up_usuario_logado {
+    height: auto;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 1em;
+
+    gap: 0.3em;
+
+    border-radius: 10px;
+
+    position: absolute;
+    top: 6em;
+    left: 74%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.pop_up_usuario_logado h2 {
+    width: 100%;
+
+    font-size: 1.27em;
+}
+
+.titulo_menu_pop {
+    border-bottom: 1px black solid;
+}
+
+.pop_up_usuario_logado ul {
+    margin: 0%;
+    padding: 0%;
+
+    gap: 0.7em;
+
+    list-style: none;
+}
+
+.pop_up_usuario_logado a {
+    font-size: 1.1em;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.option_encerrar_sessao {
+    margin-top: 2em;
 }
 
 @media (max-width: 1200px) {
@@ -200,8 +267,7 @@ header {
         height: 100%;
     }
 
-    .pop_up_usuario_padrao {
-        height: 14em;
+    .pop_up_usuario_deslogado {
 
         padding: 1em;
 
@@ -211,22 +277,55 @@ header {
         left: 56%;
     }
 
-    .pop_up_usuario_padrao h2 {
+    .pop_up_usuario_deslogado h2 {
 
         font-size: 1.5em;
     }
 
 
-    .pop_up_usuario_padrao p {
+    .pop_up_usuario_deslogado p {
 
         font-size: 1em;
     }
 
-    .pop_up_usuario_padrao button {
+    .pop_up_usuario_deslogado button {
         width: 12em;
         height: 2.5em;
 
     }
+
+    .pop_up_usuario_logado {
+
+
+        padding: 1em;
+
+        gap: 0.3em;
+
+        top: 6em;
+        left: 64%;
+
+    }
+
+    .pop_up_usuario_logado h2 {
+
+        font-size: 1.18em;
+    }
+
+
+    .pop_up_usuario_logado ul {
+        gap: 0.7em;
+
+    }
+
+    .pop_up_usuario_logado a {
+        font-size: 1.1em;
+
+    }
+
+    .option_encerrar_sessao {
+        margin-top: 2em;
+    }
+
 
 }
 
@@ -249,27 +348,58 @@ header {
         height: 80%;
     }
 
-    .pop_up_usuario_padrao{
-        height: 14em;
+    .pop_up_usuario_deslogado {
         gap: 0.5em;
 
     }
 
-    .pop_up_usuario_padrao h2 {
+    .pop_up_usuario_deslogado h2 {
 
         font-size: 1.4em;
     }
 
 
-    .pop_up_usuario_padrao p {
+    .pop_up_usuario_deslogado p {
 
         font-size: 1.1em;
     }
 
-    .pop_up_usuario_padrao button {
+    .pop_up_usuario_deslogado button {
         width: 10em;
         height: 2.5em;
 
+    }
+
+      .pop_up_usuario_logado {
+
+
+        padding: 1em;
+
+        gap: 0.3em;
+
+        top: 5em;
+        left: 65%;
+
+    }
+
+    .pop_up_usuario_logado h2 {
+
+        font-size: 1.02em;
+    }
+
+
+    .pop_up_usuario_logado ul {
+        gap: 0.7em;
+
+    }
+
+    .pop_up_usuario_logado a {
+        font-size: 0.95em;
+
+    }
+
+    .option_encerrar_sessao {
+        margin-top: 2em;
     }
 }
 
@@ -288,28 +418,60 @@ header {
         height: 95%;
     }
 
-    .pop_up_usuario_padrao{
+    .pop_up_usuario_deslogado {
         top: 4.5em;
         left: 56%;
     }
 
-    .pop_up_usuario_padrao h2 {
+    .pop_up_usuario_deslogado h2 {
 
         font-size: 1.1em;
     }
 
 
-    .pop_up_usuario_padrao p {
+    .pop_up_usuario_deslogado p {
 
         font-size: 0.9em;
     }
 
-    .pop_up_usuario_padrao button {
+    .pop_up_usuario_deslogado button {
         width: 12em;
         height: 2.3em;
 
         font-size: 0.9em;
 
+    }
+
+    .pop_up_usuario_logado {
+
+
+        padding: 1em;
+
+        gap: 0.3em;
+
+        top: 5em;
+        left: 50%;
+
+    }
+
+    .pop_up_usuario_logado h2 {
+
+        font-size: 1.1em;
+    }
+
+
+    .pop_up_usuario_logado ul {
+        gap: 0.7em;
+
+    }
+
+    .pop_up_usuario_logado a {
+        font-size: 0.95em;
+
+    }
+
+    .option_encerrar_sessao {
+        margin-top: 2em;
     }
 
 }
@@ -334,25 +496,24 @@ header {
         gap: 0.8em;
     }
 
-    .pop_up_usuario_padrao{
-        height: 14em;
+    .pop_up_usuario_deslogado {
         gap: 0.5em;
         top: 5em;
         left: 48%;
     }
 
-    .pop_up_usuario_padrao h2 {
+    .pop_up_usuario_deslogado h2 {
 
         font-size: 1.2em;
     }
 
 
-    .pop_up_usuario_padrao p {
+    .pop_up_usuario_deslogado p {
 
         font-size: 1em;
     }
 
-    .pop_up_usuario_padrao button {
+    .pop_up_usuario_deslogado button {
         width: 12em;
         height: 2.7em;
 
