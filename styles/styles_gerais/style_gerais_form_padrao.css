@@ -26,6 +26,8 @@ main {
     flex-direction: column;
 
     margin: 4em 0 4em 0;
+
+
 }
 
 .titulo_form {
@@ -54,6 +56,10 @@ main {
 }
 
 .form_cadastro label {
+    height: 3.5em;
+
+    margin: auto;
+
     text-indent: 0em;
     margin: 0em;
     padding: 0em;
@@ -141,7 +147,7 @@ main {
     margin: 0em;
     padding: 0em;
 
-    gap: 5em;
+    gap: 6em;
 }
 
 .form_padrao {
@@ -180,6 +186,43 @@ main {
 
 }
 
+.form_padrao textarea {
+    width: 100%;
+    height: 20em;
+
+    padding: 1em;
+
+    border-radius: 10px;
+
+    border: 2px solid black;
+}
+
+.conteiner_upload_imagem {
+    height: 30em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    margin-bottom: 3em;
+}
+
+.conteiner_upload_imagem input {
+    width: 32%;
+    margin: 0 auto;
+    display: block;
+    border: none;
+}
+
+
+
+
 
 @media (max-width: 992px) {
 
@@ -193,8 +236,21 @@ main {
     }
 
     .form_cadastro label {
-        font-size: 1em;
+        font-size: 0.8em;
 
+    }
+
+    .form_cadastro input {
+        font-size: 0.7em;
+
+    }
+
+    .form_cadastro select {
+        font-size: 0.7em;
+    }
+
+    .form_cadastro textarea {
+        font-size: 0.7em;
     }
 
 
@@ -206,6 +262,10 @@ main {
         font-size: 1.2em;
     }
 
+    .conteiner_form_group {
+        gap: 2em;
+    }
+
     .conteiner_form_group p {
         font-size: 0.9em;
     }
@@ -213,6 +273,22 @@ main {
     .conteiner_link_form p {
         font-size: 1.2em;
     }
+
+    .conteiner_upload_imagem {
+        height: 20em;
+
+        margin-bottom: 2em;
+    }
+
+
+    .conteiner_upload_imagem h3 {
+        font-size: 1.5em;
+    }
+
+    .conteiner_upload_imagem p {
+        font-size: 1em;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -234,7 +310,7 @@ main {
         gap: 3em;
     }
 
-     .conteiner_form_group p {
+    .conteiner_form_group p {
         font-size: 0.8em;
     }
 
