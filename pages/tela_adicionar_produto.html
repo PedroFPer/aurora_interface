@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_header.css">
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_footer.css">
     <link rel="stylesheet" href="../styles/styles_gerais/style_gerais_form_padrao.css">
-    <title>Aurora | Adicionar Cadastro Usuario</title>
+    <title>Aurora | Adicionar Endereço</title>
 </head>
 
 <body>
@@ -46,43 +46,66 @@
         </nav>
     </header>
     <main class="row">
-        <div class=" conteiner_form_cadas_func col-9 row">
+        <div class=" conteiner_form_cadas_func col-xl-9 col-11 row">
             <div class="titulo_form col-12">
-                <h1>Crie sua conta para começar!</h1>
+                <h1>Adicionar Produto</h1>
             </div>
 
             <form class="form_cadastro row col-12" action="submit">
                 <div class="col-12 form_padrao">
-                    <label>Digite o seu nome::</label>
-                    <input type="text" id="input_nome_consumidor" placeholder="Exemplo: Roberto da Silva">
-                </div>
-
-                <div class="col-12 form_padrao">
-                    <label>Digite o seu email::</label>
-                    <input type="text" id="input_email_consumidor" placeholder="Exemplo: RobertoSilva22@exemplo.com">
-                </div>
-
-                <div class="col-12 form_padrao">
-                    <label>Digite a sua senha::</label>
-                    <input type="text" id="input_senha_consumidor" placeholder="Mínimo 8 caracteres, com maiúscula, minúscula e símbolo.">
-                </div>
-
-                <div class="col-12 form_padrao">
-                    <label>Digite novamente a sua senha:</label>
-                    <input type="text" id="input_senha_consumidor_confi" placeholder="Confirme sua senha">
+                    <label>Digite o nome do produto:</label>
+                    <input type="text" id="input_nome_produto" placeholder="Exemplo: Vestido Floral Branco com Rosas ">
                 </div>
 
                 <div class="row conteiner_form_group col-12">
-                    <p class="col-12">Ao se cadastrar, você declara que leu e concorda com os Termos e Condições, e está
-                        ciente de que seus dados serão tratados conforme a nossa Política de Privacidade.</p>
+                    <div class="col-3 form_padrao">
+                        <label for="numero">Digite o preço:</label>
+                        <input type="text" id="input_preco" placeholder="Exemplo: 108,00">
+                    </div>
+
+                    <div class="col-3 form_padrao">
+                        <label for="select_categoria">Selecione a categoria:</label>
+                        <select name="select_categoria" id="select_categoria">
+                            <option value="vestido">Vestido</option>
+                            <option value="praia">Praia</option>
+                            <option value="calça">Calça</option>
+                            <option value="macacao">Macacão</option>
+                            <option value="blusa">Blusa</option>
+                            <option value="short">Short</option>
+                            <option value="camisa">Camisa</option>
+                            <option value="inverno">Inverno</option>
+                            <option value="jeans">Jeans</option>
+                        </select>
+                    </div>
+
+                     <div class="col-3 form_padrao">
+                        <label for="select_tamanho">Selecione o tamanho:</label>
+                        <select name="select_tamanho" id="select_tamanho">
+                            <option value="tamanho_pp">PP</option>
+                            <option value="tamanho_p">P</option>
+                            <option value="tamanho_m">M</option>
+                            <option value="tamanho_g">G</option>
+                            <option value="tamanho_gg">GG</option>
+                        </select>
+                    </div>
                 </div>
 
+                <div class="col-12 form_padrao">
+                    <label>Digite a descrição do produto:</label>
+                    <textarea type="text" id="input_descricao_produto" placeholder="Descreva a roupa (cor, estampa, estilo...)"></textarea>
+                </div>
 
-                <button class="col-8">Cadastrar Novo Endereço</button>
+                <div class="col-12 form_padrao row">
+                    <label>Adicione a imagens:</label>
+                    <div class="conteiner_upload_imagem col-12">
+                        <h3>Faça upload de uma foto</h3>
+                        <p>Arraste e solte os arquivos aqui</p>
+                        <input type="file" id="input_imagem" name="input_imagem[]" accept="image/*" multiple> <!-- Para limitar para 3 imagens tem que ser no js-->
+                    </div>
+                </div>
+
+                <button class="col-8">Adicionar produto</button>
             </form>
-            <div class="col-12 conteiner_link_form">
-                <p>Já tem uma conta? Faça o login <a href="#">aqui</a>.</p>
-            </div>
         </div>
     </main>
     <footer class="row">
