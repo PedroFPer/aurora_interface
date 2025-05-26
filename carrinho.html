@@ -1,83 +1,142 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles/styles_especificos/carrinho.css">
 </head>
 <body>
-    <header></header>
 
     <main>
-        <div>
-            <div>
+        <div class="geral">
+            <div class="title">
                 <h1>Carrinho</h1>
-                <div class="separador">
+            </div>
+            <div class="separador">
+                <div class="produtos">
                     <div class="produto">
-                        <div class="opn">
-                            <div class="sel">
-                                <input type="checkbox" name="sel" id="sel">
-                            </div>
-                            <div class="lix">
-                                <button type="button" class="lixo"></button>
-                            </div>
-                            
+                        <div>
+                            <input type="checkbox" name="produto1" id="produto1"> 
                         </div>
                         <div class="img">
-                            
-
                         </div>
-                        <div class="descricao">
-                            <h2>Vestido curto branco com recortes cut-out</h2>
-                            <select name="btn" id="cor" class="option">
-                                    <option value="selecione">Cor</option>
-                                    <option value="branco">Branco</option>
-                                    <option value="preto">Preto</option>
+
+                        <div class="info">
+                            <div class="titulo">
+                                <h2>Vestido curto branco com recortes cut-out</h2>
+                            </div>
+
+                            <div class="linha">
+                                
+                                <select name="cor" id="cor" class="select">
+                                    <option value="">Cor</option>
                                     <option value="azul">Azul</option>
                                     <option value="vermelho">Vermelho</option>
-                            </select>
-                            
-                            <select name="btn" id="Tamanho" class="option">
-                                    <option value="selecione">Tamanho</option>
-                                    <option value="pp">PP</option>
-                                    <option value="p">P</option>
-                                    <option value="m">M</option>
-                                    <option value="g">G</option>
-                            </select>
-                            
-                            <p>Quantidade <input type="number" name="quantidade" id="quantidade" class="qtd" min="1" max="100" value="1"> </p>
-                            <p>R$ 99,99</p>
+                                    <option value="verde">Verde</option>
+                                </select>
 
-                        </div>
+                                <select name="tamanho" id="tamanho" class="select">
+                                    <option value="">Tamanho</option>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="medio">Médio</option>
+                                    <option value="grande">Grande</option>
+                                </select>
 
-                    </div>
-                    <div class="resumo">
-                        <h2>Resumo do pedido</h2>
-                        <div class="pag">
-                            <div class="detalhes">
-                            
-                                <h2>Produtos</h2>
-                                <h2>Total</h2>
-        
-                            </div>
-                            <div class="price">
-                                <h2>410,00</h2>
-                                <h2>410,00</h2>
+                                <button>
+                                    <i></i>
+                                </button>
+
                             </div>
 
-                        </div>
-                        <button class="btn-comprar">Continuar</button>
+                            <div class="linha-2">
+                                <div class="qtd"> 
+                                    <p>Quantidade<input type="number" name="quantidade" id="quantidade" value="1" min="1"></p>
+                                </div>
+                                <div class="preco-p">
+                                    <p>400,00</p>
+                                </div>
+                            </div>
                         
 
+                        <div>
+                        
+                        </div>
+                     </div>
+                    </div>
+
+                    <div class="produto">
+                        <div>
+                            <input type="checkbox" name="produto1" id="produto1"> 
+                        </div>
+                        <div class="img-2">
+                        </div>
+
+                        <div class="info">
+                            <div class="titulo">
+                                <h2>Vestido curto branco com recortes cut-out</h2>
+                            </div>
+
+                            <div class="linha">
+                                
+                                <select name="cor" id="cor" class="select">
+                                    <option value="">Cor</option>
+                                    <option value="azul">Azul</option>
+                                    <option value="vermelho">Vermelho</option>
+                                    <option value="verde">Verde</option>
+                                </select>
+
+                                <select name="tamanho" id="tamanho" class="select">
+                                    <option value="">Tamanho</option>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="medio">Médio</option>
+                                    <option value="grande">Grande</option>
+                                </select>
+
+                                <button>
+                                    <i></i>
+                                </button>
+
+                            </div>
+
+                            <div class="linha-2">
+                                <div class="qtd"> 
+                                    <p>Quantidade<input type="number" name="quantidade" id="quantidade" value="1" min="1"></p>
+                                </div>
+                                <div class="preco-p">
+                                    <p>400,00</p>
+                                </div>
+                            </div>
+                        
+
+                        <div>
+                        
+                        </div>
+                     </div>
+                    </div>
+
+                   
+
+                </div>
+                <div class="resumo">
+                    <div>
+                        <h2>Resumo</h2>
+                    </div>
+                    <div>
+                        <div class="preco ">
+                            <div class="sub"> <p>Produtos</p></div>
+                            <div class="total"><p>400,00</p></div>
+                        </div>
+                        <div class="preco">
+                            <div class="sub"> <p>Total</p></div>
+                            <div class="total"><p>400,00</p></div>
+                        </div>
+                        <button type="button" class="btn">continuar</button>
                     </div>
                     
                 </div>
-
             </div>
-            <div>
 
-            </div>
         </div>
     </main>
     

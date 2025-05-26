@@ -241,6 +241,16 @@ header{
     opacity: 0.6;
 }
 
+@media(max-width: 450px) {
+    .container{
+        width: 60%;
+        height: 55%;
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+    
+}
+
 
 @media (max-width: 1200px) {
 
