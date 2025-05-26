@@ -48,42 +48,73 @@
     <main class="row">
         <div class=" conteiner_form_cadas_func col-9 row">
             <div class="titulo_form col-12">
-                <h1>Cadastro de Funcionario</h1>
+                <h1>Adicionar Endereço de Envio</h1>
             </div>
 
             <form class="form_cadastro row col-12" action="submit">
                 <div class="col-12 form_padrao">
-                    <label>Digite o nome do funcionário:</label>
-                    <input class="form-control" type="text" placeholder="Exemplo: Roberto da Silva">
+                    <label>CEP:</label>
+                    <input type="text" placeholder="Exemplo: 12345-678">
                 </div>
 
                 <div class="col-12 form_padrao">
-                    <label>Digite o email do funcionário:</label>
-                    <input class="form-control" type="email" placeholder="Exemplo: RobertoSilva22@exemplo.com">
+                    <label>Logradouro:</label>
+                    <input  type="text" placeholder="Exemplo: Rua das Flores">
                 </div>
 
                 <div class="col-12 form_padrao">
-                    <label>Digite a senha provisória do funcionário:</label>
-                    <input class="form-control" type="text"
-                        placeholder="Mínimo 8 caracteres, com maiúscula, minúscula e símbolo.">
+                    <label>Bairro:</label>
+                    <input  type="text" placeholder="Exemplo: Jardim Primavera">
                 </div>
 
                 <div class="col-12 form_padrao">
-                    <label>Digite novamente a senha provisória:</label>
-                    <input class="form-control" type="text" placeholder="Confirme sua senha">
+                    <label>Cidade:</label>
+                    <input type="text" placeholder="Exemplo: Nova Esperança">
                 </div>
 
-                <div class="col-12 form_padrao">
-                    <label>Digite o cargo do funcionário:</label>
-                    <select class="form-control" name="select_cargo" id="select_cargo">
-                        <option value="" disabled selected>Selecione o cargo</option>
-                        <option value="admin">Administrador</option>
-                        <option value="geren_func">Gerenciador de Funcionário</option>
-                        <option value="geren_prod">Gerenciador de Produtos</option>
-                    </select>
+                <div class="row conteiner_form_group col-12">
+                    <div class="col-5 col-sm-4 form_padrao">
+                        <label for="select_estado">Estado:</label>
+                        <select name="select_estado" id="select_estado">
+                            <option value="" disabled selected>Selecione o estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="col-5 col-sm-4 form_padrao">
+                        <label for="numero">Número:</label>
+                        <input type="text" id="numero" placeholder="Exemplo: 22">
+                    </div>
                 </div>
 
-                <button class="col-8">Cadastrar</button>
+
+                <button class="col-8">Cadastrar Novo Endereço</button>
             </form>
         </div>
     </main>
