@@ -1,7 +1,7 @@
 /* Products Grid */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
@@ -24,9 +24,8 @@
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Product Image */
 .product-image {
-  height: 427px;
+  height: 400px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -43,9 +42,9 @@
 /* Product Info */
 .product-info {
   padding: 20px;
-  flex-grow: 1;
   position: relative;
   background: #fff;
+  flex-grow: 1;
 }
 
 .product-title {
@@ -62,7 +61,10 @@
   font-size: 24px;
   font-weight: 700;
   color: #000;
-  margin-bottom: 15px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  margin-bottom: 0; /* remove margem extra */
 }
 
 .product-arrow {
@@ -84,7 +86,7 @@
 /* Categories Filter Section */
 .categories-filter {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* centraliza tudo */
   align-items: center;
   margin-bottom: 30px;
   flex-wrap: wrap;
@@ -100,7 +102,7 @@
   display: flex;
   gap: 15px;
   overflow-x: auto;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   flex-grow: 1;
   justify-content: center;
 }
@@ -134,6 +136,7 @@
 .filter-arrows {
   display: flex;
   gap: 10px;
+  align-items: center; /* <- essa linha aqui */
 }
 
 .arrow-left, .arrow-right {
