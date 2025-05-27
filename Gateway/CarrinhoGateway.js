@@ -4,22 +4,22 @@ import httpClient from "../Config/AxiosClient.js";
 
 export class CarrinhoGateway {
   async create(Carrinho) {
-    return httpClient.post('/Carrinho', Carrinho.toJSON());
+    return httpClient.post('/carrinho', Carrinho.toJSON());
   }
 
   async update(CarrinhoId, Carrinho) {
-    return httpClient.put(`/Carrinho/${CarrinhoId}`, Carrinho.toJSON());
+    return httpClient.put(`/carrinho/${CarrinhoId}`, Carrinho.toJSON());
   }
 
   async delete(CarrinhoId) {
-    return httpClient.delete(`/Carrinho/${CarrinhoId}`);
+    return httpClient.delete(`/carrinho/${CarrinhoId}`);
   }
 
   async getById(CarrinhoId) {
-    return httpClient.getById(`/Carrinho/${CarrinhoId}`);
+    return httpClient.getById(`/carrinho/${CarrinhoId}`);
   }
 
   async listAll() {
-    return httpClient.get('/Carrinho');
+    return httpClient.get('/carrinho');
   }
 }
