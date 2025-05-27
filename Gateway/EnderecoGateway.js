@@ -4,22 +4,22 @@ import httpClient from "../Config/AxiosClient.js";
 
 export class EnderecoGateway {
   async create(Endereco) {
-    return httpClient.post('/Endereco', Endereco.toJSON());
+    return httpClient.post('/endereco', Endereco.toJSON());
   }
 
   async update(EnderecoId, Endereco) {
-    return httpClient.put(`/Endereco/${EnderecoId}`, Endereco.toJSON());
+    return httpClient.put(`/endereco/${EnderecoId}`, Endereco.toJSON());
   }
 
   async delete(EnderecoId) {
-    return httpClient.delete(`/Endereco/${EnderecoId}`);
+    return httpClient.delete(`/endereco/${EnderecoId}`);
   }
 
   async getById(EnderecoId) {
-    return httpClient.getById(`/Endereco/${EnderecoId}`);
+    return httpClient.getById(`/endereco/${EnderecoId}`);
   }
 
   async listAll() {
-    return httpClient.get('/Endereco');
+    return httpClient.get('/endereco');
   }
 }

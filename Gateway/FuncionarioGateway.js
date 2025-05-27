@@ -4,22 +4,25 @@ import httpClient from "../Config/AxiosClient.js";
 
 export class FuncionarioGateway {
   async create(Funcionario) {
-    return httpClient.post('/Funcionario', Funcionario.toJSON());
+    return httpClient.post('/funcionario', Funcionario.toJSON());
   }
 
   async update(FuncionarioId, Funcionario) {
-    return httpClient.put(`/Funcionario/${FuncionarioId}`, Funcionario.toJSON());
+    return httpClient.put(`/funcionario/${FuncionarioId}`, Funcionario.toJSON());
   }
 
   async delete(FuncionarioId) {
-    return httpClient.delete(`/Funcionario/${FuncionarioId}`);
+    return httpClient.delete(`/funcionario/${FuncionarioId}`);
   }
 
   async getById(FuncionarioId) {
-    return httpClient.getById(`/Funcionario/${FuncionarioId}`);
+    return httpClient.getById(`/funcionario/${FuncionarioId}`);
+  }
+async getById(FuncionarioCPF) {
+    return httpClient.getById(`/funcionario/${FuncionarioCPF}`);
   }
 
   async listAll() {
-    return httpClient.get('/Funcionario');
+    return httpClient.get('/funcionario');
   }
 }
