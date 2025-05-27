@@ -8,7 +8,21 @@ body{
 
 }
 
+.geral{
+    width: 99%;
+    height: 120%;
+    background-image: url(../../assets/imagens/imagens_editadas/woman.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -10rem;
 
+
+}
+main{
+    width: 100%;
+    height: 100%;
+   
+}
 
 
 .container{
