@@ -160,12 +160,12 @@ header {
     border-radius: 10px;
 
     position: absolute;
-    top: 6em;
-    left: 65%;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
+
+
 
 .pop_up_usuario_deslogado p {
 
@@ -184,20 +184,21 @@ header {
 
 }
 
-.pop_up_usuario_deslogado figure{
+.pop_up_usuario_deslogado figure {
     width: 18%;
     height: 18%;
 }
 
-.pop_up_usuario_deslogado img{
+.pop_up_usuario_deslogado img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 
 }
 
-.pop_up_carrinho{
-     left: 60%;
+.pop_up_carrinho {
+    top: 6em;
+    left: 60%;
 }
 
 .pop_up_usuario_logado {
@@ -215,11 +216,19 @@ header {
     border-radius: 10px;
 
     position: absolute;
-    top: 6em;
-    left: 74%;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+}
+
+#pop_up_consumidor {
+    top: 6em;
+    left: 73%;
+}
+
+.pop_up_funcionario {
+    top: 6em;
+    left: 64%;
 }
 
 .pop_up_usuario_logado h2 {
@@ -295,15 +304,20 @@ header {
     }
 
     .pop_up_usuario_logado {
-
-
         padding: 1em;
 
         gap: 0.3em;
 
-        top: 6em;
-        left: 64%;
+    }
 
+    #pop_up_consumidor {
+        top: 6em;
+        left: 65%;
+    }
+
+    .pop_up_funcionario {
+        top: 6em;
+        left: 53%;
     }
 
     .pop_up_usuario_logado h2 {
@@ -370,16 +384,20 @@ header {
 
     }
 
-      .pop_up_usuario_logado {
-
-
+    .pop_up_usuario_logado {
         padding: 1em;
 
         gap: 0.3em;
+    }
 
+    #pop_up_consumidor {
         top: 5em;
         left: 65%;
+    }
 
+    .pop_up_funcionario {
+        top: 5em;
+        left: 54%;
     }
 
     .pop_up_usuario_logado h2 {
@@ -443,15 +461,19 @@ header {
     }
 
     .pop_up_usuario_logado {
-
-
         padding: 1em;
 
         gap: 0.3em;
+    }
 
-        top: 5em;
-        left: 50%;
+     #pop_up_consumidor {
+        top: 4.5em;
+        left: 48%;
+    }
 
+    .pop_up_funcionario {
+        top: 4.5em;
+        left: 34%;
     }
 
     .pop_up_usuario_logado h2 {
