@@ -16,10 +16,10 @@ export class ClienteGateway {
   }
 
   async getById(userId) {
-    return httpClient.getById(`/cliente/${userId}`);
+    return httpClient.get(`/cliente/${userId}`);
   }
   async getByEmail(userEmail) {
-    return httpClient.getByEmail(`/cliente/email/${userEmail}`);
+    return httpClient.get(`/cliente/email/${userEmail}`);
   }
 
   async listAll() {
