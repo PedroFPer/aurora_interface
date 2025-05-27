@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_header.css">
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_footer.css">
     <link rel="stylesheet" href="../styles/styles_gerais/style_gerais_form_padrao.css">
-    <title>Aurora | Cadastro Funcionario</title>
+    <title>Aurora | Adicionar Cadastro Usuario</title>
 </head>
 
 <body>
@@ -48,43 +48,41 @@
     <main class="row">
         <div class=" conteiner_form_cadas_func col-9 row">
             <div class="titulo_form col-12">
-                <h1>Cadastro de Funcionario</h1>
+                <h1>Crie sua conta para começar!</h1>
             </div>
 
             <form class="form_cadastro row col-12" action="submit">
                 <div class="col-12 form_padrao">
-                    <label>Digite o nome do funcionário:</label>
-                    <input class="form-control" id="input_nome_funcionario" type="text" placeholder="Exemplo: Roberto da Silva">
+                    <label>Digite o seu nome::</label>
+                    <input type="text" id="input_nome_consumidor" placeholder="Exemplo: Roberto da Silva">
                 </div>
 
                 <div class="col-12 form_padrao">
-                    <label>Digite o email do funcionário:</label>
-                    <input class="form-control" id="input_email_funcionario" type="email" placeholder="Exemplo: RobertoSilva22@exemplo.com">
+                    <label>Digite o seu email::</label>
+                    <input type="text" id="input_email_consumidor" placeholder="Exemplo: RobertoSilva22@exemplo.com">
                 </div>
 
                 <div class="col-12 form_padrao">
-                    <label>Digite a senha provisória do funcionário:</label>
-                    <input class="form-control" type="text" id="input_senha_funcionario"
-                        placeholder="Mínimo 8 caracteres, com maiúscula, minúscula e símbolo.">
+                    <label>Digite a sua senha::</label>
+                    <input type="text" id="input_senha_consumidor" placeholder="Mínimo 8 caracteres, com maiúscula, minúscula e símbolo.">
                 </div>
 
                 <div class="col-12 form_padrao">
-                    <label>Digite novamente a senha provisória:</label>
-                    <input class="form-control" type="text" id="input_senha_confirmacao_funcionario" placeholder="Confirme sua senha">
+                    <label>Digite novamente a sua senha:</label>
+                    <input type="text" id="input_senha_consumidor_confi" placeholder="Confirme sua senha">
                 </div>
 
-                <div class="col-12 form_padrao">
-                    <label>Digite o cargo do funcionário:</label>
-                    <select class="form-control" name="select_cargo" id="select_cargo">
-                        <option value="" disabled selected>Selecione o cargo</option>
-                        <option value="admin">Administrador</option>
-                        <option value="geren_func">Gerenciador de Funcionário</option>
-                        <option value="geren_prod">Gerenciador de Produtos</option>
-                    </select>
+                <div class="row conteiner_form_group col-12">
+                    <p class="col-12">Ao se cadastrar, você declara que leu e concorda com os Termos e Condições, e está
+                        ciente de que seus dados serão tratados conforme a nossa Política de Privacidade.</p>
                 </div>
 
-                <button class="col-8">Cadastrar</button>
+
+                <button class="col-8">Cadastrar Novo Endereço</button>
             </form>
+            <div class="col-12 conteiner_link_form">
+                <p>Já tem uma conta? Faça o login <a href="#">aqui</a>.</p>
+            </div>
         </div>
     </main>
     <footer class="row">
@@ -126,7 +124,6 @@
             </ul>
         </div>
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
