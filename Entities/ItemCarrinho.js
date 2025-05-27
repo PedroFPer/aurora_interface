@@ -5,4 +5,12 @@ export class ItemCarrinho {
     this.quantidade = quantidade;
     this.preco_unitario = preco_unitario;
   }
+  toJSON() {
+    return {
+      carrinho_id: this.carrinho_id,
+      produto_id: this.produto_id,
+      quantidade: this.quantidade,
+      preco_unitario: this.preco_unitario,
+    };
+  }
 }

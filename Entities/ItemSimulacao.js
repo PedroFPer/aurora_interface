@@ -5,4 +5,12 @@ export class ItemSimulacao {
     this.quantidade = quantidade;
     this.preco_unitario = preco_unitario;
   }
+  toJSON() {
+    return {
+      simulacao_id: this.simulacao_id,
+      produto_id: this.produto_id,
+      quantidade: this.quantidade,
+      preco_unitario: this.preco_unitario,
+    };
+  }
 }
