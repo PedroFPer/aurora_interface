@@ -7,10 +7,9 @@ export class Cliente {
   }
   toJSON() {
     return {
-      nome_completo: this.nome_completo,
+      nomeCompleto: this.nome_completo,
       email: this.email,
       senha: this.senha,
-      
     };
   }
 
