@@ -7,4 +7,14 @@ export class SimulacaoCompra {
     this.endereco_id = endereco_id; // FK
     this.list = list; // Lista de itens simulados
   }
+  toJSON() {
+    return {
+      cliente_id: this.cliente_id,
+      data_simulacao: this.data_simulacao,
+      valor_total: this.valor_total,
+      status: this.status,
+      endereco_id: this.endereco_id,
+      list: this.list,
+      }
+    }
 }

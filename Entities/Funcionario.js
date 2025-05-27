@@ -6,4 +6,13 @@ export class Funcionario {
     this.cargo = cargo; // Enum esperado
     this.status = status;
   }
+  toJSON() {
+    return {
+      nome_completo: this.nome_completo,
+      email: this.email,
+      senha: this.senha,
+      cargo: this.cargo,
+      status: this.status,
+    };
+  }
 }

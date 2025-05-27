@@ -9,4 +9,15 @@ export class Endereco {
     this.estado = estado;
     this.cep = cep;
   }
+  toJSON() {
+    return {
+      cliente_id: this.cliente_id,
+      rua: this.rua,
+      numero: this.numero,
+      complemento: this.complemento,
+      bairro: this.bairro,
+      cidade: this.cidade,
+      estado: this.estado,
+      cep: this.cep,
+    }}
 }
