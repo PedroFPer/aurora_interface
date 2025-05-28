@@ -220,7 +220,12 @@ main {
     border: none;
 }
 
+.mensagem-erro{
 
+    opacity: 0.8;
+    color: red;
+    font-size: 0.9em;
+}
 
 
 
