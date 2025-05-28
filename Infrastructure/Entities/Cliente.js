@@ -3,8 +3,9 @@ export class Cliente {
     this.nome_completo = nome_completo;
     this.email = email;
     this.senha = senha;
-    this.carrinho_id = carrinho_id; // FK (1:1)
+    this.carrinho_id = carrinho_id;
   }
+
   toJSON() {
     return {
       nomeCompleto: this.nome_completo,
@@ -13,4 +14,12 @@ export class Cliente {
     };
   }
 
+  static fromJSON(json) {
+    return new Cliente(
+      json.nomeCompleto || json.nome_completo,
+      json.email,
+      json.senha,
+      json.carrinho_id || null
+    );
+  }
 }
