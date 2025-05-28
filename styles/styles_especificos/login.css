@@ -255,10 +255,29 @@ header{
     opacity: 0.6;
 }
 
-@media(max-width: 450px) {
+@media(max-width: 1000px) {
     .container{
         width: 60%;
-        height: 55%;
+        height: 70%;
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+    
+}
+
+@media(max-width: 800px) {
+    .container{
+        width: 60%;
+        height: 62%;
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+    
+}
+@media(max-width: 800px) {
+    .container{
+        width: 60%;
+        height: 62%;
         margin-top: 10%;
         margin-left: 5%;
     }
@@ -266,11 +285,11 @@ header{
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 780px) {
 
 .conteiner_logo figure{
-    width:  50%;
-    height: 50%;
+    width:  60%;
+    height: 40%;
     overflow: hidden;
     margin: 0%;
 

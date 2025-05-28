@@ -30,6 +30,7 @@ body{
     height: 100%;
     margin: 1rem;
     border-right: 1px solid #ccc;
+    margin-bottom: 20rem;
     
     
 }
@@ -118,12 +119,15 @@ body{
     flex-direction: row;
     align-items: center;
     border: 1px solid #000;
+    
 }
 .detalhe-c{
     width: 100%;
     height: 10rem;
     border: #000 solid 1px;
-    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
 }
 .ende p {
     margin-left: 0.5rem;
@@ -151,17 +155,22 @@ body{
 .sub p{
     width: 5rem;
     margin-left: 1rem;
+    margin-top: 1rem;
 }
 
 .sts{
     width: 100%;
-    
     border: #000 solid 1px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    
 
 }
 .sts p{
     margin-left: 1rem;
     margin-right: 2rem;
+    margin-top: 1rem;
 }
 
 .btn {
@@ -182,13 +191,13 @@ h1 {
     margin: 0.2rem;
     margin-top: 2rem;
     margin-left: 2rem;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-weight: 600;
 }
 
 h2 {
     text-align: left;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-weight: 600;
 }
 
@@ -198,7 +207,7 @@ p {
     font-weight: 600;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1000px) {
     .geral {
         width: 100%;
     }
