@@ -3,9 +3,10 @@ export class Produto {
     this.nome = nome;
     this.descricao = descricao;
     this.preco_unitario = preco_unitario;
-    this.categoria = categoria; // Pode ser string ou categoria_id
-    this.imagens = imagens; // Lista de URLs
+    this.categoria = categoria;
+    this.imagens = imagens;
   }
+
   toJSON() {
     return {
       nome: this.nome,
@@ -16,4 +17,13 @@ export class Produto {
     };
   }
 
+  static fromJSON(json) {
+    return new Produto(
+      json.nome,
+      json.descricao,
+      json.preco_unitario,
+      json.categoria,
+      json.imagens || []
+    );
+  }
 }

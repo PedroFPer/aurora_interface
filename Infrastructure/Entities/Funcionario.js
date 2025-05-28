@@ -3,9 +3,10 @@ export class Funcionario {
     this.nome_completo = nome_completo;
     this.email = email;
     this.senha = senha;
-    this.cargo = cargo; // Enum esperado
+    this.cargo = cargo;
     this.status = status;
   }
+
   toJSON() {
     return {
       nome_completo: this.nome_completo,
@@ -14,5 +15,15 @@ export class Funcionario {
       cargo: this.cargo,
       status: this.status,
     };
+  }
+
+  static fromJSON(json) {
+    return new Funcionario(
+      json.nome_completo,
+      json.email,
+      json.senha,
+      json.cargo,
+      json.status
+    );
   }
 }
