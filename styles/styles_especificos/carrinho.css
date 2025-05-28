@@ -30,6 +30,7 @@ body{
     height: 100%;
     margin: 1rem;
     border-right: 1px solid #ccc;
+    margin-bottom: 20rem;
     
     
 }
@@ -120,14 +121,21 @@ body{
     border: 1px solid #000;
 }
 
+.preco-p p {
+    
+    margin-left: 18rem;
+}
+
 .total p{
     margin-left: 8rem;
     margin-right: 2rem;
+    margin-top: 1rem;
 }
 
 .sub p{
     width: 5rem;
     margin-left: 1rem;
+    margin-top: 1rem;
 }
 
 .btn {
@@ -140,6 +148,8 @@ body{
     background-color: #000;
     color: #fff;
     font-weight: bold;
+    text-align: center;
+    
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -148,13 +158,13 @@ h1 {
     margin: 0.2rem;
     margin-top: 2rem;
     margin-left: 2rem;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-weight: 600;
 }
 
 h2 {
     text-align: left;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-weight: 600;
 }
 
@@ -162,6 +172,23 @@ p {
     text-align: left;
     font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 600;
+}
+
+.btn-l {
+    background: none;
+    color: white    ;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.icone{
+  background-image: url(../../assets/icon/delete_24dp_000000_FILL0_wght400_GRAD0_opsz24.png);
+  height: 2rem;
+  width: 1rem;
+    background-size: contain;
+  background-repeat: no-repeat;
+    
 }
 
 @media (max-width: 450px) {
