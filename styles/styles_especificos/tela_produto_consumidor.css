@@ -163,7 +163,7 @@
 }
 
 .product-description h2 {
-  font-size: 36px;
+  font-size: clamp(20px, 5vw, 36px);
   font-weight: 400;
   text-decoration: underline;
   margin-bottom: 30px;
@@ -193,7 +193,7 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .product-info {
     padding: 0;
   }
@@ -201,24 +201,25 @@
 
 @media (max-width: 768px) {
   .product-title {
-    font-size: 28px;
+    font-size: clamp(20px, 4vw, 32px);
   }
-  
+
   .price {
-    font-size: 36px;
+    font-size: clamp(24px, 6vw, 48px);
   }
-  
+
   .installments,
   .size-label,
+  .size-option,
   .description-content {
-    font-size: 18px;
+    font-size: clamp(16px, 3vw, 24px);
   }
-  
+
   .add-to-cart {
-    font-size: 24px;
+    font-size: clamp(18px, 4vw, 32px);
     padding: 20px;
   }
-  
+
   .size-option {
     width: 50px;
     height: 50px;
