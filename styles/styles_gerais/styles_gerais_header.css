@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body{
+body {
     width: 100vw;
     height: 100vh;
 
@@ -8,12 +8,12 @@ body{
     margin: 0%;
 }
 
-header{
+header {
     width: 100%;
     height: 6em;
 
     padding: 0.5%;
-    margin-top:10em;
+    margin-top: 10em;
 
     display: flex;
     align-items: center;
@@ -23,7 +23,7 @@ header{
 
 }
 
-.conteiner_logo{
+.conteiner_logo {
     height: 5em;
 
     display: flex;
@@ -31,11 +31,11 @@ header{
     flex-direction: row;
 
     margin: 0% auto 1% 1em;
-   
+
 }
 
-.conteiner_logo figure{
-    width:  40%;
+.conteiner_logo figure {
+    width: 40%;
     height: 40%;
     overflow: hidden;
     margin: 0%;
@@ -43,14 +43,14 @@ header{
 }
 
 .conteiner_logo img {
-    height: 100%; 
-    width: 100%; 
+    height: 100%;
+    width: 100%;
     object-fit: cover
 }
 
 .conteiner_input_buscar {
     height: 100%;
-    position: relative; 
+    position: relative;
 
     display: flex;
     justify-content: center;
@@ -61,25 +61,25 @@ header{
 }
 
 .conteiner_input_buscar input {
-    width: 100%; 
+    width: 100%;
     height: 3em;
     border-radius: 10px;
 
     text-indent: 1em;
-   
+
 }
 
 .btn_buscar {
     width: 3.8em;
     height: 2.8em;
 
-    position: absolute; 
-    top: 50%; 
-    right: 0.8em; 
-    transform: translateY(-50%); 
+    position: absolute;
+    top: 50%;
+    right: 0.8em;
+    transform: translateY(-50%);
 
-    border: none; 
-    border-radius: 0 10px 10px 0; 
+    border: none;
+    border-radius: 0 10px 10px 0;
     background-color: black;
 }
 
@@ -89,19 +89,19 @@ header{
     justify-content: center;
     flex-direction: row;
 
-    width:  100%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     margin: 0%;
 }
 
 .btn_buscar img {
-    height: 100%; 
-    width: 100%; 
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
-.conteiner_nav{
+.conteiner_nav {
     height: 3em;
 
     display: flex;
@@ -112,7 +112,7 @@ header{
     padding: 0%;
 }
 
-.conteiner_nav_option{
+.conteiner_nav_option {
     width: 80%;
     height: 80%;
 
@@ -120,7 +120,7 @@ header{
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    
+
     gap: 1.5em;
 
     list-style: none;
@@ -128,100 +128,416 @@ header{
     padding: 0%;
 
     margin: 0%;
-    
+
 }
 
-.conteiner_nav_option figure{
-    width:  100%;
+.conteiner_nav_option figure {
+    width: 100%;
     height: 100%;
     overflow: hidden;
     margin: 0%;
 }
 
-.conteiner_nav_option img{
-    height: 100%; 
-    width: 100%; 
+.conteiner_nav_option img {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     opacity: 0.6;
 }
 
+.pop_up_usuario_deslogado {
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 1em;
+
+    gap: 0.3em;
+
+    border-radius: 10px;
+
+    position: absolute;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+
+
+.pop_up_usuario_deslogado p {
+
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.pop_up_usuario_deslogado button {
+    width: 16em;
+    height: 3em;
+
+    border-radius: 10px;
+
+    color: white;
+    background-color: black;
+
+}
+
+.pop_up_usuario_deslogado figure {
+    width: 18%;
+    height: 18%;
+}
+
+.pop_up_usuario_deslogado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.pop_up_carrinho {
+    top: 6em;
+    left: 60%;
+}
+
+.pop_up_usuario_logado {
+    height: auto;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 1em;
+
+    gap: 0.3em;
+
+    border-radius: 10px;
+
+    position: absolute;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#pop_up_consumidor {
+    top: 6em;
+    left: 73%;
+}
+
+.pop_up_funcionario {
+    top: 6em;
+    left: 64%;
+}
+
+.pop_up_usuario_logado h2 {
+    width: 100%;
+
+    font-size: 1.27em;
+}
+
+.titulo_menu_pop {
+    border-bottom: 1px black solid;
+}
+
+.pop_up_usuario_logado ul {
+    margin: 0%;
+    padding: 0%;
+
+    gap: 0.7em;
+
+    list-style: none;
+}
+
+.pop_up_usuario_logado a {
+    font-size: 1.1em;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.option_encerrar_sessao {
+    margin-top: 2em;
+}
 
 @media (max-width: 1200px) {
 
-.conteiner_logo figure{
-    width:  50%;
-    height: 50%;
-    overflow: hidden;
-    margin: 0%;
+    .conteiner_logo figure {
+        width: 50%;
+        height: 50%;
+        overflow: hidden;
+        margin: 0%;
+
+    }
+
+    .conteiner_nav_option {
+        width: 100%;
+        height: 100%;
+    }
+
+    .pop_up_usuario_deslogado {
+
+        padding: 1em;
+
+        gap: 0.5em;
+
+        top: 5em;
+        left: 56%;
+    }
+
+    .pop_up_usuario_deslogado h2 {
+
+        font-size: 1.5em;
+    }
+
+
+    .pop_up_usuario_deslogado p {
+
+        font-size: 1em;
+    }
+
+    .pop_up_usuario_deslogado button {
+        width: 12em;
+        height: 2.5em;
+
+    }
+
+    .pop_up_usuario_logado {
+        padding: 1em;
+
+        gap: 0.3em;
+
+    }
+
+    #pop_up_consumidor {
+        top: 6em;
+        left: 65%;
+    }
+
+    .pop_up_funcionario {
+        top: 6em;
+        left: 53%;
+    }
+
+    .pop_up_usuario_logado h2 {
+
+        font-size: 1.18em;
+    }
+
+
+    .pop_up_usuario_logado ul {
+        gap: 0.7em;
+
+    }
+
+    .pop_up_usuario_logado a {
+        font-size: 1.1em;
+
+    }
+
+    .option_encerrar_sessao {
+        margin-top: 2em;
+    }
+
 
 }
-    
-.conteiner_nav_option{
-    width: 100%;
-    height: 100%;
-}
 
-}
+@media (max-width: 992px) {
 
-@media (max-width: 992x) {
+    .conteiner_logo figure {
+        width: 70%;
+        height: 70%;
 
-.conteiner_logo figure{
-    width:  70%;
-    height: 70%;
-  
 
-}
+    }
 
-.conteiner_input_buscar input {
-    place-content: none;
-   
-}
+    .conteiner_input_buscar input {
+        place-content: none;
 
-.conteiner_nav_option{
-    width: 80%;
-    height: 80%;
-}
+    }
+
+    .conteiner_nav_option {
+        width: 80%;
+        height: 80%;
+    }
+
+    .pop_up_usuario_deslogado {
+        gap: 0.5em;
+
+    }
+
+    .pop_up_usuario_deslogado h2 {
+
+        font-size: 1.4em;
+    }
+
+
+    .pop_up_usuario_deslogado p {
+
+        font-size: 1.1em;
+    }
+
+    .pop_up_usuario_deslogado button {
+        width: 10em;
+        height: 2.5em;
+
+    }
+
+    .pop_up_usuario_logado {
+        padding: 1em;
+
+        gap: 0.3em;
+    }
+
+    #pop_up_consumidor {
+        top: 5em;
+        left: 65%;
+    }
+
+    .pop_up_funcionario {
+        top: 5em;
+        left: 54%;
+    }
+
+    .pop_up_usuario_logado h2 {
+
+        font-size: 1.02em;
+    }
+
+
+    .pop_up_usuario_logado ul {
+        gap: 0.7em;
+
+    }
+
+    .pop_up_usuario_logado a {
+        font-size: 0.95em;
+
+    }
+
+    .option_encerrar_sessao {
+        margin-top: 2em;
+    }
 }
 
 
 @media (max-width: 768px) {
 
-.conteiner_logo figure{
-    width:  70%;
-    height: 70%;
+    .conteiner_logo figure {
+        width: 70%;
+        height: 70%;
+
+    }
+
+
+    .conteiner_nav_option {
+        width: 95%;
+        height: 95%;
+    }
+
+    .pop_up_usuario_deslogado {
+        top: 4.5em;
+        left: 56%;
+    }
+
+    .pop_up_usuario_deslogado h2 {
+
+        font-size: 1.1em;
+    }
+
+
+    .pop_up_usuario_deslogado p {
+
+        font-size: 0.9em;
+    }
+
+    .pop_up_usuario_deslogado button {
+        width: 12em;
+        height: 2.3em;
+
+        font-size: 0.9em;
+
+    }
+
+    .pop_up_usuario_logado {
+        padding: 1em;
+
+        gap: 0.3em;
+    }
+
+     #pop_up_consumidor {
+        top: 4.5em;
+        left: 48%;
+    }
+
+    .pop_up_funcionario {
+        top: 4.5em;
+        left: 34%;
+    }
+
+    .pop_up_usuario_logado h2 {
+
+        font-size: 1.1em;
+    }
+
+
+    .pop_up_usuario_logado ul {
+        gap: 0.7em;
+
+    }
+
+    .pop_up_usuario_logado a {
+        font-size: 0.95em;
+
+    }
+
+    .option_encerrar_sessao {
+        margin-top: 2em;
+    }
 
 }
 
+@media(max-width :576px) {
 
-.conteiner_nav_option{
-    width: 95%;
-    height: 95%;
-}
-
-}
-
-@media(max-width :576px){
-
-    header{
+    header {
         height: 4em;
     }
 
- .conteiner_logo{
-    height: 3m;
-   
+    .conteiner_logo {
+        height: 3m;
+
     }
-    
-  .conteiner_logo figure{
-    width:  70%;
-    height: 70%;
-  }
 
-  .conteiner_nav_option{
-    gap: 0.8em;
-  }
+    .conteiner_logo figure {
+        width: 70%;
+        height: 70%;
+    }
+
+    .conteiner_nav_option {
+        gap: 0.8em;
+    }
+
+    .pop_up_usuario_deslogado {
+        gap: 0.5em;
+        top: 5em;
+        left: 48%;
+    }
+
+    .pop_up_usuario_deslogado h2 {
+
+        font-size: 1.2em;
+    }
+
+
+    .pop_up_usuario_deslogado p {
+
+        font-size: 1em;
+    }
+
+    .pop_up_usuario_deslogado button {
+        width: 12em;
+        height: 2.7em;
+
+    }
 }
-
-
-
-
-
