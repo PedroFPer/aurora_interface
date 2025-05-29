@@ -1,6 +1,6 @@
 import { Cliente } from "../Entities/Cliente.js";
 import { ValidarUsuario } from "../Validators/ValidarUsuario.js"
-import { CadastroCliente } from "../Service/CadastroCliente.js";
+import { CadastroClienteService } from "../Service/CadastroClienteService.js";
 
 const form = document.getElementById("form_cadastro_cliente");
 const outputErroNome = document.getElementById('erro-nome');
@@ -8,7 +8,7 @@ const outputErroEmail = document.getElementById('erro-email');
 const outputErroSenha = document.getElementById('erro-senha');
 const outputErroSenhaConfir = document.getElementById('erro-senha_confi');
 
-const service = new CadastroCliente();
+const service = new CadastroClienteService();
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
