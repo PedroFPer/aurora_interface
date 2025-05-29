@@ -1,6 +1,6 @@
 import { ClienteGateway} from "../Gateway/ClienteGateway.js"
 
-export class CadastroClienteService{
+export class CadastroCliente{
     constructor(){
         this.gateway = new ClienteGateway();
     }
