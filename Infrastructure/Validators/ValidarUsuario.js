@@ -66,28 +66,11 @@ export class ValidarUsuario {
             return "*CPF inválido!";
         }
 
-        let soma = 0;
-        for (let i = 0; i < 9; i++) {
-            soma += parseInt(cpf.charAt(i)) * (10 - i);
-        }
-        let primeiroDigito = 11 - (soma % 11);
-        if (primeiroDigito > 9) primeiroDigito = 0;
-        if (parseInt(cpf.charAt(9)) !== primeiroDigito) {
-            console.log("*CPF inválido!");
-            return "*CPF inválido!";
-        }
+        return null;
+    }
 
-        soma = 0;
-        for (let i = 0; i < 10; i++) {
-            soma += parseInt(cpf.charAt(i)) * (11 - i);
-        }
-        let segundoDigito = 11 - (soma % 11);
-        if (segundoDigito > 9) segundoDigito = 0;
-        if (parseInt(cpf.charAt(10)) !== segundoDigito) {
-            console.log("*CPF inválido!");
-            return "*CPF inválido!";
-        }
-
+    static validarSelect(select){
+        if(!select) return "*Por favor, selecione uma opção";
         return null;
     }
 }
