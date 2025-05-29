@@ -66,28 +66,31 @@ export class ValidarUsuario {
             return "*CPF inválido!";
         }
 
-        let soma = 0;
-        for (let i = 0; i < 9; i++) {
-            soma += parseInt(cpf.charAt(i)) * (10 - i);
-        }
-        let primeiroDigito = 11 - (soma % 11);
-        if (primeiroDigito > 9) primeiroDigito = 0;
-        if (parseInt(cpf.charAt(9)) !== primeiroDigito) {
-            console.log("*CPF inválido!");
-            return "*CPF inválido!";
-        }
-
-        soma = 0;
-        for (let i = 0; i < 10; i++) {
-            soma += parseInt(cpf.charAt(i)) * (11 - i);
-        }
-        let segundoDigito = 11 - (soma % 11);
-        if (segundoDigito > 9) segundoDigito = 0;
-        if (parseInt(cpf.charAt(10)) !== segundoDigito) {
-            console.log("*CPF inválido!");
-            return "*CPF inválido!";
-        }
-
         return null;
+    }
+
+    static validarSelect(select) {
+        if (!select) return "*Por favor, selecione uma opção";
+        return null;
+    }
+
+    static validarCep(cep) {
+        const cepLimpo = cep.replace(/\D/g, "");
+        if (!/^[0-9]{8}$/.test(cepLimpo)) return "*Cep inválido!"
+    }
+
+    static validarNumeroCasa(numero) {
+
+        if (!numero || numero.trim() === "") {
+            return "O número da casa é obrigatório.";
+        }
+
+        const numeroInt = parseInt(numero, 10);
+        if (isNaN(numeroInt) || numeroInt <= 0) {
+            return "*Informe um número de casa válido";
+        }
+
+        return null; 
+
     }
 }
