@@ -69,8 +69,28 @@ export class ValidarUsuario {
         return null;
     }
 
-    static validarSelect(select){
-        if(!select) return "*Por favor, selecione uma opção";
+    static validarSelect(select) {
+        if (!select) return "*Por favor, selecione uma opção";
         return null;
+    }
+
+    static validarCep(cep) {
+        const cepLimpo = cep.replace(/\D/g, "");
+        if (!/^[0-9]{8}$/.test(cepLimpo)) return "*Cep inválido!"
+    }
+
+    static validarNumeroCasa(numero) {
+
+        if (!numero || numero.trim() === "") {
+            return "O número da casa é obrigatório.";
+        }
+
+        const numeroInt = parseInt(numero, 10);
+        if (isNaN(numeroInt) || numeroInt <= 0) {
+            return "*Informe um número de casa válido";
+        }
+
+        return null; 
+
     }
 }
