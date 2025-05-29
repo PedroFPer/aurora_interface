@@ -1,19 +1,19 @@
 export class Produto {
-  constructor(nome, descricao, preco_unitario, categoria, imagens = []) {
+  constructor(nome, descricao, precoUnitario, categoria, imagem ) {
     this.nome = nome;
     this.descricao = descricao;
-    this.preco_unitario = preco_unitario;
+    this.precoUnitario = precoUnitario;
     this.categoria = categoria;
-    this.imagens = imagens;
+    this.imagem = imagem; // Pode ser um base64 string ou ArrayBuffer, conforme sua escolha
   }
 
   toJSON() {
     return {
       nome: this.nome,
       descricao: this.descricao,
-      preco_unitario: this.preco_unitario,
+      precoUnitario: this.precoUnitario,
       categoria: this.categoria,
-      imagens: this.imagens,
+      imagem: this.imagem,
     };
   }
 
@@ -21,9 +21,9 @@ export class Produto {
     return new Produto(
       json.nome,
       json.descricao,
-      json.preco_unitario,
+      json.precoUnitario,
       json.categoria,
-      json.imagens || []
+      json.imagem || null
     );
   }
 }
