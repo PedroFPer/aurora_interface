@@ -1,5 +1,5 @@
 import { FuncionarioGateway } from "../Gateway/FuncionarioGateway.js"
-import { Funcionario } from "../Entities/Funcionario.js"
+
 class LoginFuncionario{
     
     constructor(cpf,password){
