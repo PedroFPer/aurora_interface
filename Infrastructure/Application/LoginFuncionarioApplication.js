@@ -1,9 +1,13 @@
 import { ValidarUsuario } from "../Validators/ValidarUsuario.js"
+import {LoginFuncionarioService} from "../Service/LoginFuncionarioService.js"
 
 
 const form = document.getElementById("form_login_funcionario");
 const outputErroCpf = document.getElementById('erro-cpf');
 const outputErroSenha = document.getElementById('erro-senha');
+
+const service = new LoginFuncionarioService();
+
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -23,7 +27,7 @@ form.addEventListener("submit", async (event) => {
      if (temErro) return;
 
      try {
-        await service.cadastrar(cliente);
+        await service.verificar_login(cpf,senha);
         alert("Cadastro realizado com sucesso! Redirecionando para a tela inicial. Faça o login para continuar.");
         form.reset();
 
