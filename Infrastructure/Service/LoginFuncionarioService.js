@@ -1,13 +1,20 @@
 import { FuncionarioGateway } from "../Gateway/FuncionarioGateway.js"
+import { Funcionario } from "../Entities/Funcionario.js"
 class LoginFuncionario{
     
-    constructor(email,password){
-        this.clienteGateway = new ClienteGateway()
-        this.email=email
+    constructor(cpf,password){
+        this.funcionarioGateway = new FuncionarioGateway()
+        this.cpf=cpf
         this.password=password
     }
-    verificar_login(){
-        this.clienteGateway.getByEmail(this.email)
-        
+    async verificar_login() {
+    const funcionario = await this.funcionarioGateway.getByCpf(this.cpf);
+    if (funcionario && funcionario.senha === this.password) {
+        console.log("Login válido");
+        return true
+    } else {
+        console.log("CPF ou senha inválidos");
+        return false
+        }
     }
 }
