@@ -1,6 +1,6 @@
 import { Cliente } from "../Entities/Cliente.js";
 import { ValidarUsuario } from "../Validators/ValidarUsuario.js"
-import { CadastroCliente } from "../Service/CadastroCliente.js";
+import { CadastroClienteService } from "../Service/CadastroClienteService.js";
 
 const form = document.getElementById("form_cadastro_cliente");
 const outputErroNome = document.getElementById('erro-nome');
@@ -8,7 +8,7 @@ const outputErroEmail = document.getElementById('erro-email');
 const outputErroSenha = document.getElementById('erro-senha');
 const outputErroSenhaConfir = document.getElementById('erro-senha_confi');
 
-const service = new CadastroCliente();
+const service = new CadastroClienteService();
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -37,9 +37,13 @@ form.addEventListener("submit", async (event) => {
 
     try {
         await service.cadastrar(cliente);
-        alert("Cliente cadastrado com sucesso!");
+        alert("Cadastro realizado com sucesso! Redirecionando para a tela inicial. Faça o login para continuar.");
         form.reset();
+
+        setTimeout(() => {
+            window.location.href = "/index.html";
+        }, 2000);
     } catch (erro) {
-        alert("Erro ao cadastrar cliente: " + erro.message);
+        alert("Ocorreu um problema ao realizar o cadastro. Verifique sua conexão com a internet e tente novamente. Se o erro persistir, entre em contato com o suporte técnico. ");
     }
 })

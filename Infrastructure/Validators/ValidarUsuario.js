@@ -66,28 +66,55 @@ export class ValidarUsuario {
             return "*CPF inválido!";
         }
 
-        let soma = 0;
-        for (let i = 0; i < 9; i++) {
-            soma += parseInt(cpf.charAt(i)) * (10 - i);
-        }
-        let primeiroDigito = 11 - (soma % 11);
-        if (primeiroDigito > 9) primeiroDigito = 0;
-        if (parseInt(cpf.charAt(9)) !== primeiroDigito) {
-            console.log("*CPF inválido!");
-            return "*CPF inválido!";
+        return null;
+    }
+
+    static validarSelect(select) {
+        if (!select) return "*Por favor, selecione uma opção";
+        return null;
+    }
+
+    static validarCep(cep) {
+        const cepLimpo = cep.replace(/\D/g, "");
+        if (!/^[0-9]{8}$/.test(cepLimpo)) return "*Cep inválido!"
+    }
+
+    static validarNumeroCasa(numero) {
+
+        if (!numero || numero.trim() === "") {
+            return "O número da casa é obrigatório.";
         }
 
-        soma = 0;
-        for (let i = 0; i < 10; i++) {
-            soma += parseInt(cpf.charAt(i)) * (11 - i);
+        const numeroInt = parseInt(numero, 10);
+        if (isNaN(numeroInt) || numeroInt <= 0) {
+            return "*Informe um número de casa válido";
         }
-        let segundoDigito = 11 - (soma % 11);
-        if (segundoDigito > 9) segundoDigito = 0;
-        if (parseInt(cpf.charAt(10)) !== segundoDigito) {
-            console.log("*CPF inválido!");
-            return "*CPF inválido!";
+
+        return null;
+
+    }
+
+    static validarPreco(preco) {
+        const regex = /^\d{1,5}(,\d{1,2})?$/;
+
+        if (!regex.test(preco)) return "*Preço inválido!";
+
+        return null;
+    }
+
+    static validarImagem(arquivo) {
+        if (!arquivo) {
+            return "*Campo obrigatório";
+        }
+
+        const tiposPermitidos = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/webp'];
+
+        if (!tiposPermitidos.includes(arquivo.type)) {
+            return "*Arquivo inválido. Selecione uma imagem (jpg, png, gif, bmp, webp).";
         }
 
         return null;
     }
+
+
 }
