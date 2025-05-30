@@ -1,29 +1,32 @@
 export class Funcionario {
-  constructor(nome_completo, email, senha, cargo, status) {
-    this.nome_completo = nome_completo;
+  constructor(nomeCompleto, email, cpf, senha, cargo, status) {
+    this.nomeCompleto = nomeCompleto;
     this.email = email;
     this.senha = senha;
+    this.cpf = cpf;
     this.cargo = cargo;
-    this.status = status;
+    //this.status = status;
   }
 
   toJSON() {
     return {
-      nome_completo: this.nome_completo,
+      nomeCompleto: this.nomeCompleto,
       email: this.email,
       senha: this.senha,
-      cargo: this.cargo,
-      status: this.status,
+      cpf: this.cpf,
+      cargo: this.cargo
+      //status: this.status,
     };
   }
 
   static fromJSON(json) {
     return new Funcionario(
-      json.nome_completo,
+      json.nomeCompleto,
       json.email,
       json.senha,
-      json.cargo,
-      json.status
+      json.cpf,
+      json.cargo
+      //json.status
     );
   }
 }

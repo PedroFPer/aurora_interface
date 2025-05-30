@@ -1,4 +1,4 @@
-import httpClient from "../Config/AxiosClient.js";
+import httpClient from "../../Config/AxiosClient.js";
 import { Cliente } from "../Entities/Cliente.js";
 
 export class ClienteGateway {

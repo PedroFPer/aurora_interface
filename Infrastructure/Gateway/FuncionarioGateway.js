@@ -7,10 +7,12 @@ export class FuncionarioGateway {
     return Funcionario.fromJSON(data);
   }
 
-  async update(funcionarioId, funcionario) {
-    const { data } = await httpClient.put(`/funcionario/${funcionarioId}`, funcionario.toJSON());
-    return Funcionario.fromJSON(data);
-  }
+async update(funcionarioId, funcionario) {
+
+  const { data } = await httpClient.put(`/funcionario/${funcionarioId}`, json);
+  return Funcionario.fromJSON(data);
+}
+
 
   async delete(funcionarioId) {
     return httpClient.delete(`/funcionario/${funcionarioId}`);
