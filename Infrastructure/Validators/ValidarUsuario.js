@@ -90,7 +90,31 @@ export class ValidarUsuario {
             return "*Informe um número de casa válido";
         }
 
-        return null; 
+        return null;
 
     }
+
+    static validarPreco(preco) {
+        const regex = /^\d{1,5}(,\d{1,2})?$/;
+
+        if (!regex.test(preco)) return "*Preço inválido!";
+
+        return null;
+    }
+
+    static validarImagem(arquivo) {
+        if (!arquivo) {
+            return "*Campo obrigatório";
+        }
+
+        const tiposPermitidos = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/webp'];
+
+        if (!tiposPermitidos.includes(arquivo.type)) {
+            return "*Arquivo inválido. Selecione uma imagem (jpg, png, gif, bmp, webp).";
+        }
+
+        return null;
+    }
+
+
 }
