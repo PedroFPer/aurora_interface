@@ -4,16 +4,14 @@ import { Funcionario } from "../Entities/Funcionario.js";
 export class FuncionarioGateway {
   async create(funcionario) {
     const { data } = await httpClient.post('/funcionario', funcionario.toJSON());
-    const funcionarioReturn = Funcionario.fromJSON(data);
-    return funcionarioReturn;
-
-  }
-
-  async update(funcionarioId, funcionario) {
-
-    const { data } = await httpClient.put(`/funcionario/${funcionarioId}`, funcionario);
     return Funcionario.fromJSON(data);
   }
+
+async update(funcionarioId, funcionario) {
+
+  const { data } = await httpClient.put(`/funcionario/${funcionarioId}`, json);
+  return Funcionario.fromJSON(data);
+}
 
 
   async delete(funcionarioId) {
@@ -22,10 +20,6 @@ export class FuncionarioGateway {
 
   async getById(funcionarioId) {
     const { data } = await httpClient.get(`/funcionario/${funcionarioId}`);
-    return Funcionario.fromJSON(data);
-  }
-  async getByCpf(cpf) {
-    const { data } = await httpClient.get(`/funcionario/cpf/${cpf}`);
     return Funcionario.fromJSON(data);
   }
 

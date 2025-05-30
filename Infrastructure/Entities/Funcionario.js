@@ -14,7 +14,7 @@ export class Funcionario {
       email: this.email,
       senha: this.senha,
       cpf: this.cpf,
-      cargo: this.cargo,
+      cargo: this.cargo
       //status: this.status,
     };
   }
@@ -25,7 +25,7 @@ export class Funcionario {
       json.email,
       json.senha,
       json.cpf,
-      json.cargo,
+      json.cargo
       //json.status
     );
   }
