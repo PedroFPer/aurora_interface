@@ -4,15 +4,16 @@ import { Funcionario } from "../Entities/Funcionario.js";
 export class FuncionarioGateway {
   async create(funcionario) {
     const { data } = await httpClient.post('/funcionario', funcionario.toJSON());
-    funcionarioReturn= Funcionario.fromJSON
+    const funcionarioReturn = Funcionario.fromJSON(data);
     return funcionarioReturn;
+
   }
 
-async update(funcionarioId, funcionario) {
+  async update(funcionarioId, funcionario) {
 
-  const { data } = await httpClient.put(`/funcionario/${funcionarioId}`, funcionario);
-  return Funcionario.fromJSON(data);
-}
+    const { data } = await httpClient.put(`/funcionario/${funcionarioId}`, funcionario);
+    return Funcionario.fromJSON(data);
+  }
 
 
   async delete(funcionarioId) {

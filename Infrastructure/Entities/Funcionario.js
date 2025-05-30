@@ -5,7 +5,7 @@ export class Funcionario {
     this.senha = senha;
     this.cpf = cpf;
     this.cargo = cargo;
-    this.status = status;
+    //this.status = status;
   }
 
   toJSON() {
@@ -15,7 +15,7 @@ export class Funcionario {
       senha: this.senha,
       cpf: this.cpf,
       cargo: this.cargo,
-      status: this.status,
+      //status: this.status,
     };
   }
 
@@ -26,7 +26,7 @@ export class Funcionario {
       json.senha,
       json.cpf,
       json.cargo,
-      json.status
+      //json.status
     );
   }
 }

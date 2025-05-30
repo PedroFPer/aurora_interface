@@ -44,7 +44,8 @@ form.addEventListener("submit", async (event) => {
 
     const status = true;
 
-    const funcionario = new Funcionario(nome, email, senha, cpf, cargo, status);
+    const funcionario = new Funcionario(nome, email, cpf, senha, cargo);
+
 
      try {
         await service.cadastrar(funcionario);
