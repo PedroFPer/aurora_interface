@@ -1,4 +1,4 @@
-import httpClient from "../Config/AxiosClient.js";
+import httpClient from "../../Config/AxiosClient.js";
 import { Produto } from "../Entities/Produto.js";
 
 export class ProdutoGateway {

@@ -51,21 +51,24 @@
                 <h1>Adicionar Produto</h1>
             </div>
 
-            <form class="form_cadastro row col-12" action="submit">
+            <form id="form_adicionar_produto" class="form_cadastro row col-12">
                 <div class="col-12 form_padrao">
                     <label>Digite o nome do produto:</label>
-                    <input type="text" id="input_nome_produto" placeholder="Exemplo: Vestido Floral Branco com Rosas ">
+                    <input type="text" name="nome" placeholder="Exemplo: Vestido Floral Branco com Rosas ">
+                    <div id="erro-nome" class="mensagem-erro"></div>
                 </div>
 
                 <div class="row conteiner_form_group col-12">
                     <div class="col-3 form_padrao">
                         <label for="numero">Digite o preço:</label>
-                        <input type="text" id="input_preco" placeholder="Exemplo: 108,00">
+                        <input type="text" name="preco" placeholder="Exemplo: 108,00">
+                        <div id="erro-preco" class="mensagem-erro"></div>
                     </div>
 
                     <div class="col-3 form_padrao">
-                        <label for="select_categoria">Selecione a categoria:</label>
-                        <select name="select_categoria" id="select_categoria">
+                        <label for="categoria">Selecione a categoria:</label>
+                        <select  name="categoria">
+                            <option value="" disabled selected>Selecione a categoria</option>
                             <option value="vestido">Vestido</option>
                             <option value="praia">Praia</option>
                             <option value="calça">Calça</option>
@@ -76,23 +79,27 @@
                             <option value="inverno">Inverno</option>
                             <option value="jeans">Jeans</option>
                         </select>
+                        <div id="erro-categoria" class="mensagem-erro"></div>
                     </div>
 
                      <div class="col-3 form_padrao">
-                        <label for="select_tamanho">Selecione o tamanho:</label>
-                        <select name="select_tamanho" id="select_tamanho">
+                        <label for="tamanho">Selecione o tamanho:</label>
+                        <select name="tamanho" >
+                            <option value="" disabled selected>Selecione o tamanho</option>
                             <option value="tamanho_pp">PP</option>
                             <option value="tamanho_p">P</option>
                             <option value="tamanho_m">M</option>
                             <option value="tamanho_g">G</option>
                             <option value="tamanho_gg">GG</option>
                         </select>
+                        <div id="erro-tamanho" class="mensagem-erro"></div>
                     </div>
                 </div>
 
                 <div class="col-12 form_padrao">
                     <label>Digite a descrição do produto:</label>
-                    <textarea type="text" id="input_descricao_produto" placeholder="Descreva a roupa (cor, estampa, estilo...)"></textarea>
+                    <textarea type="text" name="descricao_produto" placeholder="Descreva a roupa (cor, estampa, estilo...)"></textarea>
+                    <div id="erro-descricao_produto" class="mensagem-erro"></div>
                 </div>
 
                 <div class="col-12 form_padrao row">
@@ -100,11 +107,12 @@
                     <div class="conteiner_upload_imagem col-12">
                         <h3>Faça upload de uma foto</h3>
                         <p>Arraste e solte os arquivos aqui</p>
-                        <input type="file" id="input_imagem" name="input_imagem[]" accept="image/*" multiple> <!-- Para limitar para 3 imagens tem que ser no js-->
+                        <input type="file"  name="imagem" accept="image/*">
                     </div>
+                    <div id="erro-imagem" class="mensagem-erro"></div> 
                 </div>
 
-                <button class="col-8">Adicionar produto</button>
+                <button  type="submit" class="col-8">Adicionar produto</button>
             </form>
         </div>
     </main>
@@ -149,6 +157,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../Infrastructure/Application/AdicionarProdutoApplication.js"></script>
 </body>
 
 </html>
