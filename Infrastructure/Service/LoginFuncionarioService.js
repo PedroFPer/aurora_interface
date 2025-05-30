@@ -1,6 +1,7 @@
 import { FuncionarioGateway } from "../Gateway/FuncionarioGateway.js"
+import { Funcionario } from "../Entities/Funcionario.js"
 
-class LoginFuncionario{
+export class LoginFuncionarioService{
     
     constructor(cpf,password){
         this.funcionarioGateway = new FuncionarioGateway()
