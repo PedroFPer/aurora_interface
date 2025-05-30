@@ -3,26 +3,60 @@ import { Produto } from "../Entities/Produto.js";
 
 export class ProdutoGateway {
   async create(produto) {
-    const { data } = await httpClient.post('/produto', produto.toJSON());
-    return Produto.fromJSON(data);
+    if (!(produto instanceof Produto)) {
+      throw new Error("Parâmetro 'produto' deve ser uma instância de Produto");
+    }
+    try {
+      const { data } = await httpClient.post('/produto', produto.toJSON());
+      return Produto.fromJSON(data);
+    } catch (error) {
+      console.error("Erro ao criar produto:", error);
+      throw error;
+    }
   }
 
   async update(produtoId, produto) {
-    const { data } = await httpClient.put(`/produto/${produtoId}`, produto.toJSON());
-    return Produto.fromJSON(data);
+    if (!(produto instanceof Produto)) {
+      throw new Error("Parâmetro 'produto' deve ser uma instância de Produto");
+    }
+    try {
+      const { data } = await httpClient.put(`/produto/${produtoId}`, produto.toJSON());
+      return Produto.fromJSON(data);
+    } catch (error) {
+      console.error(`Erro ao atualizar produto ${produtoId}:`, error);
+      throw error;
+    }
   }
 
   async delete(produtoId) {
-    return httpClient.delete(`/produto/${produtoId}`);
+    try {
+      return await httpClient.delete(`/produto/${produtoId}`);
+    } catch (error) {
+      console.error(`Erro ao deletar produto ${produtoId}:`, error);
+      throw error;
+    }
   }
 
   async getById(produtoId) {
-    const { data } = await httpClient.get(`/produto/${produtoId}`);
-    return Produto.fromJSON(data);
+    try {
+      const { data } = await httpClient.get(`/produto/${produtoId}`);
+      return Produto.fromJSON(data);
+    } catch (error) {
+      console.error(`Erro ao buscar produto ${produtoId}:`, error);
+      throw error;
+    }
   }
 
   async listAll() {
-    const { data } = await httpClient.get('/produto');
-    return data.map(Produto.fromJSON);
+    try {
+      const { data } = await httpClient.get('/produto');
+      if (!Array.isArray(data)) {
+        throw new Error("Resposta inválida: esperado array de produtos");
+      }
+      return data.map(Produto.fromJSON);
+    } catch (error) {
+      console.error("Erro ao listar produtos:", error);
+      throw error;
+    }
   }
 }
