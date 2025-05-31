@@ -17,7 +17,8 @@
     <header class="row">
         <div class="conteiner_logo col-md-3 col-3">
             <figure>
-                <a href="/index.html"><img src="../assets/imagens/imagens_originais/Aurora-logo-500x500.png" alt="aurora_logo"></a>
+                <a href="../index.html"><img src="../assets/imagens/imagens_originais/Aurora-logo-500x500.png"
+                        alt="aurora_logo"></a>
             </figure>
         </div>
 
@@ -31,18 +32,29 @@
         <nav class="conteiner_nav col-lg-2 col-md-3 col-3">
             <ul class="conteiner_nav_option">
                 <li class="d-lg-none">
-                    <figure><img src="../assets/icon/search_black.png" alt="search_icon"></figure>
+                    <figure>
+                        <a href="#">
+                            <img src="../assets/icon/search_black.png" alt="search_icon">
+                        </a>
+                    </figure>
                 </li>
                 <li>
-                    <figure><img src="../assets/icon/apoio-suporte_100x100.png" alt="atendimento_icon"></figure>
+                    <figure id="btn_suporte">
+                        <img src="../assets/icon/apoio-suporte_100x100.png" alt="atendimento_icon">
+                    </figure>
                 </li>
                 <li>
-                    <figure><img src="../assets/icon/carrinho_100x100.png" alt="carrinho_icon"></figure>
+                    <figure id="btn_carrinho">
+                        <img src="../assets/icon/carrinho_100x100.png" alt="carrinho_icon">
+                    </figure>
                 </li>
                 <li>
-                    <figure><img src="../assets/icon/user_100x100.png" alt="user_icon"></figure>
+                    <figure id="btn_user">
+                        <img src="../assets/icon/user_100x100.png" alt="user_icon">
+                    </figure>
                 </li>
             </ul>
+
         </nav>
     </header>
     <main class="row">
@@ -108,7 +120,47 @@
         </div>
     </footer>
 
+    <div id="pop_up_user_deslogado"
+        class="pop_up_usuario_deslogado  pop_up_consumidor_deslogado col-xl-4 col-sm-5 col-6 d-none ">
+
+    </div>
+
+    <div id="pop_up_suporte_deslogado" class=" pop_up_usuario_logado pop_up_funcionario col-xl-3 col-md-4 col-6 d-none">
+
+    </div>
+
+    <div id="pop_up_carrinho_deslogado"
+        class=" pop_up_usuario_deslogado pop_up_carrinho col-xl-4 col-sm-5 col-6 d-none  ">
+
+    </div>
+
+    <div id="pop_up_funcionario_carrinho"
+        class=" pop_up_usuario_deslogado pop_up_carrinho col-xl-4 col-sm-5 col-6 d-none">
+
+    </div>
+
+    <div id="pop_up_consumidor_logado" class=" pop_up_usuario_logado col-xl-3 col-md-4 col-6 d-none">
+
+    </div>
+
+    <div id="pop_up_funcionario_geren_func_logado"
+        class=" pop_up_usuario_logado pop_up_funcionario col-xl-3 col-md-4 col-6 d-none">
+
+    </div>
+
+    <div id="pop_up_funcionario_geren_prod_logado"
+        class=" pop_up_usuario_logado col-xl-3 pop_up_funcionario col-md-4 col-6 d-none">
+
+    </div>
+
+    <div id="pop_up_funcionario_adm_logado"
+        class=" pop_up_usuario_logado col-xl-3 pop_up_funcionario col-md-4 col-6 d-none">
+
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/Infrastructure/Interacoes/HeaderPopUp.js"></script>
+    <script type="module" src="/Infrastructure/Interacoes/ImportarPopups.js"></script>
     <script type="module" src="../Infrastructure/Application/LoginFuncionarioApplication.js"></script>
 </body>
 
