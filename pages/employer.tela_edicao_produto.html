@@ -10,7 +10,18 @@
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_header.css">
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_footer.css">
     <link rel="stylesheet" href="../styles/styles_gerais/style_gerais_form_padrao.css">
-    <title>Aurora | Adicionar Produto</title>
+    <link rel="stylesheet" href="../styles/styles_gerais.css">
+    <link rel="stylesheet" href="../styles/styles_especificos/tela_listar_produtos_geral.css">
+    <link rel="stylesheet" href="../styles/styles_especificos/tela_produto_consumidor.css">
+    <link rel="stylesheet" href="../styles/styles_especificos/tela_edicao_produto.css">
+    <title>Aurora | Edição Produto</title>
+    <style>
+  body {
+    display: none;
+  }
+</style>
+<script src="/Infrastructure/Application/PersistenceSession.js"></script>
+
 </head>
 
 <body>
@@ -58,77 +69,87 @@
         </nav>
     </header>
     <main class="row">
-        <div class=" conteiner_form_cadas_func col-xl-9 col-11 row">
-            <div class="titulo_form col-12">
-                <h1>Adicionar Produto</h1>
+        <div class="product-page">
+            <div class="product-gallery">
+                <button class="gallery-nav prev">❮</button>
+                <img class="icone-edicao-label3" src="../assets/icon/caneta_edicao.png" alt="Editar foto">
+                <img src="../assets/imagens/imagens_editadas/mulher_6.jpg"
+                    alt="Vestido curto branco com recortes cut-out" class="main-image">
+                <button class="gallery-nav next">❯</button>
+                <div class="gallery-dots">•••</div>
             </div>
 
-            <form id="form_adicionar_produto" class="form_cadastro row col-12">
-                <div class="col-12 form_padrao">
-                    <label>Digite o nome do produto:</label>
-                    <input type="text" name="nome" placeholder="Exemplo: Vestido Floral Branco com Rosas ">
-                    <div id="erro-nome" class="mensagem-erro"></div>
-                </div>
-
-                <div class="row conteiner_form_group col-12">
-                    <div class="col-3 form_padrao">
-                        <label for="numero">Digite o preço:</label>
-                        <input type="text" name="preco" placeholder="Exemplo: 108,00">
-                        <div id="erro-preco" class="mensagem-erro"></div>
-                    </div>
-
-                    <div class="col-3 form_padrao">
-                        <label for="categoria">Selecione a categoria:</label>
-                        <select name="categoria">
-                            <option value="" disabled selected>Selecione a categoria</option>
-                            <option value="vestido">Vestido</option>
-                            <option value="praia">Praia</option>
-                            <option value="calça">Calça</option>
-                            <option value="macacao">Macacão</option>
-                            <option value="blusa">Blusa</option>
-                            <option value="short">Short</option>
-                            <option value="camisa">Camisa</option>
-                            <option value="inverno">Inverno</option>
-                            <option value="jeans">Jeans</option>
-                        </select>
-                        <div id="erro-categoria" class="mensagem-erro"></div>
-                    </div>
-
-                    <div class="col-3 form_padrao">
-                        <label for="tamanho">Selecione o tamanho:</label>
-                        <select name="tamanho">
-                            <option value="" disabled selected>Selecione o tamanho</option>
-                            <option value="tamanho_pp">PP</option>
-                            <option value="tamanho_p">P</option>
-                            <option value="tamanho_m">M</option>
-                            <option value="tamanho_g">G</option>
-                            <option value="tamanho_gg">GG</option>
-                        </select>
-                        <div id="erro-tamanho" class="mensagem-erro"></div>
+            <div class="product-info">
+                <div class="product-header">
+                    <img class="icone-edicao-label2" src="../assets/icon/caneta_edicao.png" alt="Editar titulo">
+                    <h1 class="product-title">VESTIDO CURTO BRANCO COM RECORTES CUT-OUT</h1>
+                    <div class="product-rating">
+                        <img src="../assets/imagens/imagens_editadas/estrela_avaliacao.png" alt="Avaliação">
                     </div>
                 </div>
 
-                <div class="col-12 form_padrao">
-                    <label>Digite a descrição do produto:</label>
-                    <textarea type="text" name="descricao_produto"
-                        placeholder="Descreva a roupa (cor, estampa, estilo...)"></textarea>
-                    <div id="erro-descricao_produto" class="mensagem-erro"></div>
-                </div>
-
-                <div class="col-12 form_padrao row">
-                    <label>Adicione a imagens:</label>
-                    <div class="conteiner_upload_imagem col-12">
-                        <h3>Faça upload de uma foto</h3>
-                        <p>Arraste e solte os arquivos aqui</p>
-                        <input type="file" name="imagem" accept="image/*">
+                <div class="valores-container">
+                    <div class="preco-container">
+                        <div class="preco">R$ 160</div>
+                        <img class="icone-edicao" src="../assets/icon/caneta_edicao.png" alt="Editar valor">
                     </div>
-                    <div id="erro-imagem" class="mensagem-erro"></div>
+                    <div class="parcelamento">Em até 3 vezes de R$ 58,39</div>
                 </div>
 
-                <button type="submit" class="col-8">Adicionar produto</button>
-            </form>
+                <div class="size-selector">
+                    <div class="size-label">
+                        Tamanho
+                        <img class="icone-edicao-label" src="../assets/icon/caneta_edicao.png" alt="Editar tamanhos">
+                    </div>
+                    <div class="size-options">
+                        <button class="size-option">PP</button>
+                        <button class="size-option">P</button>
+                        <button class="size-option active">M</button>
+                        <button class="size-option">G</button>
+                        <button class="size-option">GG</button>
+                    </div>
+                </div>
+
+                <div class="cart-actions">
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    <div class="consumer-notice">
+                        *Disponível apenas para contas de consumidor
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-description">
+                <img class="icone-edicao-label4" src="../assets/icon/caneta_edicao.png" alt="Editar titulo">
+                <h2>Descrição e composição</h2>                     
+                <div class="description-content">
+                    <p>Explore a elegância do minimalismo com nosso vestido curto off-white, desenhado para valorizar a
+                        silhueta feminina com sofisticação e leveza.</p>
+
+                    <p>Este modelo apresenta:</p>
+                    <ul>
+                        <li>Decote V profundo, que alonga o colo e adiciona um toque sensual na medida certa</li>
+                        <li>Mangas curtas bufantes, com leve volume nos ombros, criando um contraste harmonioso entre a
+                            delicadeza e a estrutura da peça</li>
+                        <li>Cintura marcada com recortes laterais, que proporcionam efeito de afunilamento e revelam
+                            discretamente a pele, destacando a feminilidade com modernidade</li>
+                        <li>Saia em camadas com acabamento em babado leve, conferindo fluidez ao movimento e um toque
+                            romântico ao visual</li>
+                        <li>Fechamento posterior invisível, que mantém a linha elegante da peça sem interferir no design
+                        </li>
+                    </ul>
+
+                    <p>Confeccionado em tecido leve e estruturado, ideal para dias quentes ou ocasiões que pedem charme
+                        e frescor. Combine com sandálias de salto ou rasteiras sofisticadas e acessórios dourados para
+                        um look completo.</p>
+                </div>
+                <div class="apply-changes-container">
+                    <button class="apply-changes">Aplicar alterações</button>
+                </div>
+            </div>
+
         </div>
     </main>
+
     <footer class="row">
         <div class="conteiner_footer_redes col-xl-3 col-lg-3 col-md-10 col-sm-8 ">
             <h3>Aurora</h3>
@@ -169,7 +190,7 @@
         </div>
     </footer>
 
-    <div id="pop_up_user_deslogado"
+      <div id="pop_up_user_deslogado"
         class="pop_up_usuario_deslogado  pop_up_consumidor_deslogado col-xl-4 col-sm-5 col-6 d-none ">
 
     </div>
