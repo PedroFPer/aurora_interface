@@ -151,6 +151,7 @@ main {
 }
 
 .form_padrao {
+    
     display: flex;
     align-items: start;
     justify-content: center;
@@ -170,9 +171,14 @@ main {
     margin: auto;
 }
 
+.conteiner_form_group{
+    height: 8em;
+}
+
 .conteiner_form_group p {
     padding: 0em;
 }
+
 
 .conteiner_link_form {
     padding: 1em;
@@ -210,7 +216,6 @@ main {
     border: 2px solid black;
     border-radius: 10px;
 
-    margin-bottom: 3em;
 }
 
 .conteiner_upload_imagem input {
@@ -220,7 +225,13 @@ main {
     border: none;
 }
 
+.mensagem-erro{
+    height: 0.3em;
 
+    opacity: 0.8;
+    color: red;
+    font-size: 0.9em;
+}
 
 
 

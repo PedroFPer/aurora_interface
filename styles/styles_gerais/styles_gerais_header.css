@@ -8,6 +8,11 @@ body {
     margin: 0%;
 }
 
+body a{
+    text-decoration: none;
+    color: inherit;
+}
+
 header {
     width: 100%;
     height: 6em;
@@ -35,8 +40,8 @@ header {
 }
 
 .conteiner_logo figure {
-    width: 40%;
-    height: 40%;
+    width: 42%;
+    height: 50%;
     overflow: hidden;
     margin: 0%;
 
@@ -136,6 +141,8 @@ header {
     height: 100%;
     overflow: hidden;
     margin: 0%;
+
+    cursor: pointer;
 }
 
 .conteiner_nav_option img {
@@ -196,6 +203,11 @@ header {
 
 }
 
+.pop_up_consumidor_deslogado{
+    top: 6em;
+    left: 65%;
+}
+
 .pop_up_carrinho {
     top: 6em;
     left: 60%;
@@ -253,8 +265,7 @@ header {
 .pop_up_usuario_logado a {
     font-size: 1.1em;
 
-    text-decoration: none;
-    color: inherit;
+    
 }
 
 .option_encerrar_sessao {
