@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../assets/icon/Aurora-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/styles_especificos/login.css">
+    <link rel="stylesheet" href="/styles/styles_gerais/style_gerais_form_padrao.css">
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_header.css">
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_footer.css">
     <title>Aurora | Login</title>
@@ -59,30 +60,30 @@
         </nav>
     </header>
 
-    <main>
-        <div class="geral">
-            
-            <div  class="container">
-                <h1 id= "title" class="title">Bem Vindo de volta!</h1>
-                <div class="form">
-                    <h2 id="email" class="sub-title">E-Mail</h2>
-                    <input type="email" name="email" id="email" class="input" placeholder="Digite seu e-mail" required>
-
-                    <h2 id="senha" class="sub-title">Senha</h2>
-                    
-                    <input type="password" name="senha" id="senha" class="input" placeholder="Digite sua senha" required>
-                    <br>
-
-                    <button type="button" class="btn-senha">Esqueci a senha</button>
-                    
-
-                </div>
-
-                <div>
-                    <button type="submit" class="btn">Entrar</button>
-                    <button type="button" id="btn-cadas" class="btn">Cadastrar</button>
-                </div>
+    <main class="row col-12">
+        <div id="conteiner_login" class=" conteiner_form_cadas_func col-xl-4 col-md-6 col-8 row">
+            <div class="titulo_form col-12">
+                <figure id="titulo_figure" class=" col-lg-8 col-9">
+                    <img src="/assets/icon/bem_vindo.png" alt="bem_vindo">
+                </figure>
             </div>
+
+            <form id="form_login_consumidor" class="form_cadastro row col-12" >
+                <div  class="col-11 form_padrao">
+                    <label>Email:</label>
+                    <input  name="email" type="text" placeholder="Exemplo: Email@email.com">
+                     <div id="erro-email" class="mensagem-erro"></div>
+                </div>
+
+                <div class="col-11 form_padrao">
+                    <label>Senha:</label>
+                    <input name="senha" type="text" placeholder="********">
+                     <div id="erro-senha" class="mensagem-erro"></div>
+                </div>
+
+                <button type="submit" class="btn_login col-8">Entrar</button>
+                <button id="btn_cadastrar" class=" btn_login col-8 ">Crie sua conta aqui!</button>
+            </form>
         </div>
     </main>
 
