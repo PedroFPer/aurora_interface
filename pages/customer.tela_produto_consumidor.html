@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="../styles/styles_gerais.css">
     <link rel="stylesheet" href="../styles/styles_especificos/tela_listar_produtos_geral.css">
     <link rel="stylesheet" href="../styles/styles_especificos/tela_produto_consumidor.css">
-    <link rel="stylesheet" href="../styles/styles_especificos/tela_edicao_produto.css">
-    <title>Aurora | Edição Produto</title>
+    <link rel="stylesheet" href="../styles/styles_gerais/style_gerais_permissao_acesso.css">
+    <title>Aurora | *Nome do produto Falta</title>
+   
+
 </head>
 
 <body>
-    <header class="row">
+   <header class="row">
         <div class="conteiner_logo col-md-3 col-3">
             <figure>
                 <a href="../index.html"><img src="../assets/imagens/imagens_originais/Aurora-logo-500x500.png"
@@ -65,7 +67,6 @@
         <div class="product-page">
             <div class="product-gallery">
                 <button class="gallery-nav prev">❮</button>
-                <img class="icone-edicao-label3" src="../assets/icon/caneta_edicao.png" alt="Editar foto">
                 <img src="../assets/imagens/imagens_editadas/mulher_6.jpg"
                     alt="Vestido curto branco com recortes cut-out" class="main-image">
                 <button class="gallery-nav next">❯</button>
@@ -74,26 +75,19 @@
 
             <div class="product-info">
                 <div class="product-header">
-                    <img class="icone-edicao-label2" src="../assets/icon/caneta_edicao.png" alt="Editar titulo">
                     <h1 class="product-title">VESTIDO CURTO BRANCO COM RECORTES CUT-OUT</h1>
                     <div class="product-rating">
                         <img src="../assets/imagens/imagens_editadas/estrela_avaliacao.png" alt="Avaliação">
                     </div>
                 </div>
 
-                <div class="valores-container">
-                    <div class="preco-container">
-                        <div class="preco">R$ 160</div>
-                        <img class="icone-edicao" src="../assets/icon/caneta_edicao.png" alt="Editar valor">
-                    </div>
-                    <div class="parcelamento">Em até 3 vezes de R$ 58,39</div>
+                <div class="product-pricing">
+                    <div class="price">R$ 160,00</div>
+                    <div class="installments">Em até 3 vezes de R$ 58,39</div>
                 </div>
 
                 <div class="size-selector">
-                    <div class="size-label">
-                        Tamanho
-                        <img class="icone-edicao-label" src="../assets/icon/caneta_edicao.png" alt="Editar tamanhos">
-                    </div>
+                    <div class="size-label">Tamanho</div>
                     <div class="size-options">
                         <button class="size-option">PP</button>
                         <button class="size-option">P</button>
@@ -103,17 +97,11 @@
                     </div>
                 </div>
 
-                <div class="cart-actions">
-                    <button class="add-to-cart">Adicionar ao Carrinho</button>
-                    <div class="consumer-notice">
-                        *Disponível apenas para contas de consumidor
-                    </div>
-                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
 
             <div class="product-description">
-                <img class="icone-edicao-label4" src="../assets/icon/caneta_edicao.png" alt="Editar titulo">
-                <h2>Descrição e composição</h2>                     
+                <h2>Descrição e composição</h2>
                 <div class="description-content">
                     <p>Explore a elegância do minimalismo com nosso vestido curto off-white, desenhado para valorizar a
                         silhueta feminina com sofisticação e leveza.</p>
@@ -135,11 +123,7 @@
                         e frescor. Combine com sandálias de salto ou rasteiras sofisticadas e acessórios dourados para
                         um look completo.</p>
                 </div>
-                <div class="apply-changes-container">
-                    <button class="apply-changes">Aplicar alterações</button>
-                </div>
             </div>
-
         </div>
     </main>
 
@@ -183,7 +167,7 @@
         </div>
     </footer>
 
-      <div id="pop_up_user_deslogado"
+     <div id="pop_up_user_deslogado"
         class="pop_up_usuario_deslogado  pop_up_consumidor_deslogado col-xl-4 col-sm-5 col-6 d-none ">
 
     </div>
@@ -224,6 +208,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="/Infrastructure/Interacoes/HeaderPopUp.js"></script>
     <script type="module" src="/Infrastructure/Interacoes/ImportarPopups.js"></script>
+    <script type="module" src="/Infrastructure/Application/PersistenceSession.js"></script>
 </body>
 
 </html>
