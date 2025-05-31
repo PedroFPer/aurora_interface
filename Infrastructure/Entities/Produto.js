@@ -4,7 +4,7 @@ export class Produto {
     this.descricao = descricao;
     this.precoUnitario = precoUnitario;
     this.categoria = categoria;
-    this.imagem = imagem; // Pode ser um base64 string ou ArrayBuffer, conforme sua escolha
+    this.imagem = imagem; 
   }
 
   toJSON() {
@@ -13,7 +13,7 @@ export class Produto {
       descricao: this.descricao,
       precoUnitario: this.precoUnitario,
       categoria: this.categoria,
-      imagem: this.imagem,
+      imagem: Array.isArray(this.imagem) ? this.imagem : Array.from(this.imagem)
     };
   }
 
