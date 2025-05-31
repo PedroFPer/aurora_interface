@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="../styles/styles_especificos/detalhes.css">
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_header.css">
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_footer.css">
-    <title>Aurora | Detalhes Pedidos</title>
-    <style>
-  body {
-    display: none;
-  }
-</style>
-<script src="/Infrastructure/Application/PersistenceSession.js"></script>
+    <link rel="stylesheet" href="../styles/styles_gerais/style_gerais_permissao_acesso.css">
+    <title>Aurora | Detalhes Pedido</title>
 
 </head>
 <body>
@@ -169,7 +164,7 @@
                     <div>
                         <h2>Resumo</h2>
                     </div>
-                    <div>
+                    <div class="conteiner_info_resumo">
                         <div class="detalhe-c endereco">
                             <div class="sub"> <p>Endereço</p></div>
                             <div class="ende"><p>Nova esperança, SP-CEP 12345-678</p></div>
@@ -184,15 +179,15 @@
                             
                             
                         </div>
-                        <div class="detalhe-l">
+                        <div class="detalhe-l-produto">
                             <div class="sub"> <p>Produtos</p></div>
                             <div class="total"><p>400,00</p></div>
                         </div>
-                        <div class="detalhe-l">
+                        <div class="detalhe-l-total">
                             <div class="sub"> <p>Total</p></div>
                             <div class="total"><p>400,00</p></div>
                         </div>
-                        <button type="button" class="btn">continuar</button>
+                        <button type="button" class="botao_resume">continuar</button>
                     </div>
                     
                 </div>
@@ -282,5 +277,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="/Infrastructure/Interacoes/HeaderPopUp.js"></script>
     <script type="module" src="/Infrastructure/Interacoes/ImportarPopups.js"></script>
+    <script type="module" src="/Infrastructure/Application/PersistenceSession.js"></script>
 </body>
 </html>

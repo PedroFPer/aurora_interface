@@ -19,5 +19,5 @@
     });
   } else {
     console.log("permissão negada")
-    window.location.href = "../pages/acesso-negado.html"; 
+    window.location.href = "/pages/acesso-negado.html"; 
   }
