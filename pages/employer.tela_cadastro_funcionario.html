@@ -10,18 +10,13 @@
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_header.css">
     <link rel="stylesheet" href="../styles/styles_gerais/styles_gerais_footer.css">
     <link rel="stylesheet" href="../styles/styles_gerais/style_gerais_form_padrao.css">
+    <link rel="stylesheet" href="../styles/styles_gerais/style_gerais_permissao_acesso.css">
     <title>Aurora | Cadastro Funcionario</title>
-    <style>
-  body {
-    display: none;
-  }
-</style>
-<script src="/Infrastructure/Application/PersistenceSession.js"></script>
 
 </head>
 
 <body>
-  <header class="row">
+    <header class="row">
         <div class="conteiner_logo col-md-3 col-3">
             <figure>
                 <a href="../index.html"><img src="../assets/imagens/imagens_originais/Aurora-logo-500x500.png"
@@ -74,12 +69,13 @@
                 <div class="col-12 form_padrao">
                     <label>Digite o nome do funcionário:</label>
                     <input name="nome" type="text" placeholder="Exemplo: Roberto da Silva" autocomplete="off">
-                     <div id="erro-nome" class="mensagem-erro"></div>
+                    <div id="erro-nome" class="mensagem-erro"></div>
                 </div>
 
                 <div class="col-12 form_padrao">
                     <label>Digite o email do funcionário:</label>
-                    <input name="email" type="email" placeholder="Exemplo: RobertoSilva22@exemplo.com" autocomplete="off">
+                    <input name="email" type="email" placeholder="Exemplo: RobertoSilva22@exemplo.com"
+                        autocomplete="off">
                     <div id="erro-email" class="mensagem-erro"></div>
                 </div>
 
@@ -91,20 +87,20 @@
 
                 <div class="col-12 form_padrao">
                     <label>Digite a senha provisória do funcionário:</label>
-                    <input  type="text"  name="senha"
+                    <input type="text" name="senha"
                         placeholder="Mínimo 8 caracteres, com maiúscula, minúscula e símbolo." autocomplete="off">
-                     <div id="erro-senha" class="mensagem-erro"></div>
+                    <div id="erro-senha" class="mensagem-erro"></div>
                 </div>
 
                 <div class="col-12 form_padrao">
                     <label>Digite novamente a senha provisória:</label>
-                    <input  type="text" name="senha_confi" placeholder="Confirme sua senha" autocomplete="off">
-                     <div id="erro-senha_confi" class="mensagem-erro"></div>
+                    <input type="text" name="senha_confi" placeholder="Confirme sua senha" autocomplete="off">
+                    <div id="erro-senha_confi" class="mensagem-erro"></div>
                 </div>
 
                 <div class="col-12 form_padrao">
                     <label>Digite o cargo do funcionário:</label>
-                    <select  name="cargo" id="select_cargo" autocomplete="off">
+                    <select name="cargo" id="select_cargo" autocomplete="off">
                         <option value="" disabled selected>Selecione o cargo</option>
                         <option value="ADMINISTRADOR_GERAL">Administrador</option>
                         <option value="GERENCIADOR_FUNCIONARIOS">Gerenciador de Funcionário</option>
@@ -156,7 +152,7 @@
             </ul>
         </div>
     </footer>
-    
+
     <div id="pop_up_user_deslogado"
         class="pop_up_usuario_deslogado  pop_up_consumidor_deslogado col-xl-4 col-sm-5 col-6 d-none ">
 
@@ -198,7 +194,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="/Infrastructure/Interacoes/HeaderPopUp.js"></script>
     <script type="module" src="/Infrastructure/Interacoes/ImportarPopups.js"></script>
-     <script type="module" src="/Infrastructure/Application/CadastroFuncionarioApplication.js"></script>
+    <script type="module" src="/Infrastructure/Application/CadastroFuncionarioApplication.js"></script>
+    <script type="module" src="/Infrastructure/Application/PersistenceSession.js"></script>
 </body>
 
 </html>
