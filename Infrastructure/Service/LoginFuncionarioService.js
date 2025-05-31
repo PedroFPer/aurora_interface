@@ -1,6 +1,5 @@
 import { FuncionarioGateway } from "../Gateway/FuncionarioGateway.js"
 
-
 export class LoginFuncionarioService{
     
     constructor(){
