@@ -1,12 +1,13 @@
 /* Products Grid */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
 }
+
 
 /* Product Card */
 .product-card {
