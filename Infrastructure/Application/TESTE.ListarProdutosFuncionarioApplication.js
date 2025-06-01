@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         `;
 
       card.onclick = () => {
-        window.location.href = `customer.tela_listar_produto.html?id=${produto.id}`;
+        window.location.href = `TESTE_tela_edicao_produto.html?id=${produto.id}`;
       };
 
       container.appendChild(card);

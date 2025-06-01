@@ -19,6 +19,9 @@
 
 .product-gallery figure{
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-image {
@@ -169,8 +172,9 @@
 .product-description {
   height: 50em;
   grid-column: 1 / -1;
-  border-top: 1px solid #000;
   padding-top: 40px;
+  margin-top: 5em;
+
 }
 
 .product-description h2 {
