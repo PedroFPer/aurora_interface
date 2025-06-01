@@ -28,7 +28,7 @@ form.addEventListener("submit", async (event) => {
     const mensagemErroCategoria = ValidarUsuario.validarSelect(categoria);
     const mensagemErroTamanho = ValidarUsuario.validarSelect(tamanho);
     const mensagemDescricaoProduto = ValidarUsuario.validarNome(descricao_produto);
-    const mensagemImagem = ValidarUsuario.validarImagem(imagemFile); // <- usa imagemFile
+    const mensagemImagem = ValidarUsuario.validarImagem(imagemFile); //
 
     outputErroNome.textContent = mensagemErroNome || '';
     outputErroPreco.textContent = mensagemErroPreco || '';
