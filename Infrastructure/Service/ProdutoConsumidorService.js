@@ -8,4 +8,4 @@ export class ProdutoConsumidorService {
   async executar(id) {
     return await this.gateway.getById(id);
   }
-}
+} 
