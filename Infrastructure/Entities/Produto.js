@@ -1,5 +1,6 @@
 export class Produto {
-  constructor(nome, descricao, precoUnitario, categoria, imagem ) {
+  constructor(nome, descricao, precoUnitario, categoria, imagem, id = null) {
+    this.id = id;
     this.nome = nome;
     this.descricao = descricao;
     this.precoUnitario = precoUnitario;
@@ -8,13 +9,17 @@ export class Produto {
   }
 
   toJSON() {
-    return {
+    const json = {
       nome: this.nome,
       descricao: this.descricao,
       precoUnitario: this.precoUnitario,
       categoria: this.categoria,
       imagem: Array.isArray(this.imagem) ? this.imagem : Array.from(this.imagem)
     };
+    if(this.id !== null) {
+      json.id = this.id;
+    }
+    return json;
   }
 
   static fromJSON(json) {
@@ -23,7 +28,8 @@ export class Produto {
       json.descricao,
       json.precoUnitario,
       json.categoria,
-      json.imagem || null
+      json.imagem || null,
+      json.id || null
     );
   }
 }
