@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
             await carregarPopup('PopUpConsumidorLogado.html', 'pop_up_consumidor_logado');
             await carregarPopup('PopUpSuporteDeslogado.html', 'pop_up_suporte_deslogado');
 
+            document.getElementById('nome_cliente').textContent = `Bem vindo(a), ${clienteInfo.cliente.nomeCompleto}`;
+
             configurarTogglePopup(btn_suporte, popups.suporteDeslogado);
             btn_carrinho.addEventListener('click', () => window.location.href = "/pages/consumer.tela_carrinho.html");
             configurarTogglePopup(btn_user, popups.consumidorLogado);
@@ -87,16 +89,22 @@ document.addEventListener('DOMContentLoaded', () => {
             switch (clienteInfo.cargo) {
                 case "ADMINISTRADOR_GERAL":
                     await carregarPopup('PopUpFuncionarioAdm.html', 'pop_up_funcionario_adm_logado');
+
+                    document.getElementById('nome_cliente').textContent = `Bem vindo(a), ${clienteInfo.cliente.nomeCompleto}`;
                     configurarTogglePopup(btn_user, popups.funcionarioAdm);
                     encerrarSessao();
                     break;
                 case "GERENCIADOR_FUNCIONARIOS":
                     await carregarPopup('PopUpFuncionarioGerenFunc.html', 'pop_up_funcionario_geren_func_logado');
+
+                    document.getElementById('nome_cliente').textContent = `Bem vindo(a), ${clienteInfo.cliente.nomeCompleto}`;
                     configurarTogglePopup(btn_user, popups.gerenFunc);
                     encerrarSessao();
                     break;
                 case "GERENCIADOR_ROUPAS":
                     await carregarPopup('PopUpFuncionarioGerenProdu.html', 'pop_up_funcionario_geren_prod_logado');
+
+                    document.getElementById('nome_cliente').textContent = `Bem vindo(a), ${clienteInfo.cliente.nomeCompleto}`;
                     configurarTogglePopup(btn_user, popups.gerenProd);
                     encerrarSessao();
                     break;
