@@ -1,9 +1,9 @@
-import {ProdutoConsumidorService} from "../Service/ProdutoConsumidorService.js";
+import { ProdutoConsumidorService } from "../Service/ProdutoConsumidorService.js";
 
 window.addEventListener('DOMContentLoaded', async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const produtoId = urlParams.get('id');
- console.log("Produto ID:", produtoId);
+  console.log("Produto ID:", produtoId);
 
 
 
@@ -15,31 +15,42 @@ window.addEventListener('DOMContentLoaded', async () => {
   const service = new ProdutoConsumidorService();
 
   try {
-    const response = await service.executar(produtoId);
+    const produto = await service.executar(produtoId);
 
-    if (!response.ok) {
-      throw new Error("Produto não encontrado.");
+    if (produto) {
+      console.log("JSON chegou:", produto);
+    } else {
+      console.log("Nenhum dado recebido ou resposta vazia.");
     }
 
-    const produto = await response.json();
+    const imageUrl = `data:image/jpeg;base64,${produto.imagem}`;
 
     document.title = `Aurora | ${produto.nome}`;
 
     document.getElementById('titulo_produto').innerText = produto.nome;
     document.getElementById('preco_produto').innerText = `R$ ${produto.precoUnitario.toFixed(2)}`;
-    document.getElementById('titulo_descricao').innerText = "Descrição";
+    document.getElementById('parcelamento').innerText = `Em até 3 vezes de R$  ${parcelamento(produto.precoUnitario.toFixed(2))}`;
     document.getElementById('descricao_produto').innerText = produto.descricao;
-
-
-
-    // Converter imagem para URL
-    const byteArray = new Uint8Array(produto.imagem);
-    const blob = new Blob([byteArray], { type: 'image/jpeg' });
-    const imageUrl = URL.createObjectURL(blob);
     document.getElementById('imagem_produto').src = imageUrl;
+
+    const tamanhosDisponiveis = 'P'
+
+    document.querySelectorAll('.size-option').forEach(botao => {
+      const tamanho = botao.innerText.trim();
+      if (tamanhosDisponiveis.includes(tamanho)) {
+        botao.classList.add('active');
+      } else {
+        botao.classList.remove('active');
+      }
+    });
 
   } catch (error) {
     console.error(error);
     alert(error.message);
   }
 });
+
+function parcelamento(preco) {
+  const parcela = preco / 3;
+  return parcela.toFixed(2).replace('.', ',');
+}

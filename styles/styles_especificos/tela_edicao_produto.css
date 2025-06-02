@@ -8,6 +8,7 @@
   gap: 60px;
   font-family: 'Poppins', sans-serif;
   position: relative;
+  
 }
 
 /* Product Gallery */
@@ -16,41 +17,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .main-image {
   width: 100%;
   max-width: 600px;
-  height: auto;
+  max-height: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
-.gallery-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
+
+#btnAlterar{
+  height: 3.4em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  font-size: 1.2em;
+
+  background-color: black;
+  padding: 25px;
+  color: white;
   border: none;
-  font-size: 24px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  border-radius: 20px;
   cursor: pointer;
-  z-index: 10;
-}
-
-.gallery-nav.prev {
-  left: 10px;
-}
-
-.gallery-nav.next {
-  right: 10px;
-}
-
-.gallery-dots {
-  font-size: 50px;
-  color: #0a0a0a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
 .icone-edicao-label3 {
@@ -72,9 +68,15 @@
 }
 
 .product-title {
+  width: 100%;
   font-size: clamp(24px, 4vw, 36px);
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 0em;
+  flex-wrap: wrap;
+}
+
+.product-title input{
+  height: 5em;
 }
 
 .icone-edicao-label2 {
@@ -194,8 +196,8 @@
 /* Product Description */
 .product-description {
   grid-column: 1 / -1;
-  border-top: 1px solid #000;
   padding-top: 40px;
+  
 }
 
 .icone-edicao-label4 {
@@ -212,6 +214,7 @@
 }
 
 .description-content {
+  height: 80%; 
   font-size: clamp(18px, 3vw, 24px);
   line-height: 1.6;
 }
@@ -221,9 +224,15 @@
   line-height: 1.6;
 }
 
-.description-content p,
-.description-content ul {
-  margin-bottom: 20px;
+.description-content textarea{
+  height: 90%;
+  width: 100%;
+  padding: 0.8em;
+  padding-left: 20px;
+
+  border: #000 1px solid;
+  border-radius: 10px;
+
 }
 
 /* Apply Changes Button */
@@ -240,6 +249,45 @@
   cursor: pointer;
   display: block;
   margin: 30px auto 0;
+}
+
+#conteiner_btn{
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#btnSalvarAlter{
+   height: 3.4em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+
+
+  font-size: 1.5em;
+
+  background-color: black;
+  padding: 25px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.mensagem-erro{
+  font-size: 1em;
+}
+
+#erro-descricao{
+  height: 2em;
+  font-size: 0.7em;
 }
 
 /* Responsivo */

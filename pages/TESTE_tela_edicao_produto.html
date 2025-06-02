@@ -12,14 +12,16 @@
     <link rel="stylesheet" href="../styles/styles_gerais/style_gerais_form_padrao.css">
     <link rel="stylesheet" href="../styles/styles_especificos/tela_listar_produtos_geral.css">
     <link rel="stylesheet" href="../styles/styles_especificos/tela_produto_consumidor.css">
+    <link rel="stylesheet" href="../styles/styles_especificos/tela_edicao_produto.css">
+    <link rel="stylesheet" href="/styles/styles_gerais/style_gerais_form_padrao.css">
     <!--<link rel="stylesheet" href="../styles/styles_gerais/style_gerais_permissao_acesso.css">-->
     <title>Aurora | *Nome do produto Falta</title>
-   
+
 
 </head>
 
 <body>
-   <header class="row">
+    <header class="row">
         <div class="conteiner_logo col-md-3 col-3">
             <figure>
                 <a href="../index.html"><img src="../assets/imagens/imagens_originais/Aurora-logo-500x500.png"
@@ -65,22 +67,27 @@
     <main class="row">
         <div class="product-page">
             <div class="product-gallery">
-                <button class="gallery-nav prev">❮</button>
-                <img src=""
-                    alt="Vestido curto branco com recortes cut-out" class="main-image">
+                <figure class="col-11">
+                    <img id="imagem_produto" src="" alt="" class="main-image">
+                </figure>
+                <button type="button" id="btnAlterar" class="col-9">Alterar Imagem</button>
+                <input type="file" id="inputFile" style="display:none">
+                <div id="erro-imagem" class="mensagem-erro"></div>
             </div>
 
             <div class="product-info">
                 <div class="product-header">
-                    <h1 class="product-title"></h1>
+                    <input id="titulo_produto" class="product-title" type="text"></input>
+                    <div id="erro-nome" class="mensagem-erro"></div>
                     <div class="product-rating">
-                        <img id="imagem_produto" src="" alt="">
+                        <img src="/assets/imagens/imagens_editadas/estrela_avaliacao.png" alt="Avaliação">
                     </div>
                 </div>
 
                 <div class="product-pricing">
-                    <div id="preco_produto" class="price"></div>
-                    <div class="installments"></div>
+                    <input id="preco_produto" class="price" type="text">
+                    <div id="erro-preco" class="mensagem-erro"></div>
+                    
                 </div>
 
                 <div class="size-selector">
@@ -88,21 +95,30 @@
                     <div class="size-options">
                         <button class="size-option">PP</button>
                         <button class="size-option">P</button>
-                        <button class="size-option ">M</button>
+                        <button class="size-option active">M</button>
                         <button class="size-option">G</button>
                         <button class="size-option">GG</button>
                     </div>
+                    <div id="erro-select_tamanho" class="mensagem-erro"></div>
                 </div>
 
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
+                <div class="cart-actions">
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    <div class="consumer-notice">
+                        *Disponível apenas para contas de consumidor
+                    </div>
+                </div>
             </div>
 
             <div class="product-description">
-                <h2></h2>
+                <h2>Descrição e Composição</h2>
                 <div class="description-content">
-                    <p id="descricao_produto"></p>
+                    <textarea id="descricao_produto"></textarea>
+                    <div id="erro-descricao" class="mensagem-erro"></div>
                 </div>
             </div>
+
+            <div id="conteiner_btn" class="col-12"><button id="btnSalvarAlter" class="col-10">Salvar Alterações</button></div>
         </div>
     </main>
 
@@ -146,7 +162,7 @@
         </div>
     </footer>
 
-     <div id="pop_up_user_deslogado"
+    <div id="pop_up_user_deslogado"
         class="pop_up_usuario_deslogado  pop_up_consumidor_deslogado col-xl-4 col-sm-5 col-6 d-none ">
 
     </div>
@@ -187,7 +203,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="/Infrastructure/Interacoes/HeaderPopUp.js"></script>
     <script type="module" src="/Infrastructure/Interacoes/ImportarPopups.js"></script>
-    <script type="module" src="/Infrastructure/Application/ProdutoConsumidorApplication.js"></script>
+    <script type="module" src="/Infrastructure/Application/EdicaoProdutoApplication.js"></script>
+    <script type="module" src="/Infrastructure/Interacoes/EdicaoProduto.js"></script>
+
     <!--<script type="module" src="/Infrastructure/Application/PersistenceSession.js"></script>-->
 </body>
 
