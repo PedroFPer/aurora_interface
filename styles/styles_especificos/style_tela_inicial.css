@@ -198,34 +198,32 @@ main {
 }
 
 .conteiner_preco_produto_em_alta {
-    height: 2em;
-
-    margin-top: 1em;
-
     display: flex;
-    align-items: center;
+    align-items: center; 
     flex-direction: row;
-
+    margin-top: 1em;
 }
 
 .conteiner_preco_produto_em_alta p {
-    margin-right: auto;
-    margin-top: 1em;
+    margin: 0;
+    margin-right: auto; 
+    font-size: 1em;
+    line-height: 1; 
 }
 
 .conteiner_preco_produto_em_alta figure {
-    width: 10%;
-    height: 30%;
-
+    width: 1.5em; 
+    height: 1.5em;
+    margin: 0;
     margin-left: auto;
-    margin-top: 1em;
+    display: flex;
+    align-items: center;
 }
 
 .conteiner_preco_produto_em_alta img {
     width: 100%;
     height: 100%;
-
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .conteiner_newsletter_signup {
