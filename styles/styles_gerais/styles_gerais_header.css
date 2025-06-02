@@ -238,7 +238,12 @@ header {
     left: 73%;
 }
 
-.pop_up_funcionario {
+.pop_up_funcionario{
+    top: 6em;
+    left: 73%;
+}
+
+#pop_up_suporte_deslogado {
     top: 6em;
     left: 64%;
 }

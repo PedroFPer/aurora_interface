@@ -2,7 +2,7 @@ export function verificarPersistence() {
     const userType = sessionStorage.getItem("userType");
     const clienteJSON = sessionStorage.getItem("clienteInfo");
 
-     console.log("userType:", userType);
+    console.log("userType:", userType);
     console.log("clienteInfo:", clienteJSON);
 
     if (userType == null) {

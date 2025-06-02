@@ -42,10 +42,7 @@ form.addEventListener("submit", async (event) => {
 
     if (temErro) return;
 
-    const status = true;
-
-
-    const funcionario = new Funcionario(nome, email, cpf, senha, cargo);
+    const funcionario = new Funcionario(nome, email, senha, cpf, cargo);
 
 
      try {

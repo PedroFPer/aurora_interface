@@ -7,12 +7,13 @@ import { ClienteGateway } from "../Gateway/ClienteGateway.js"
     
     async verificar_login(email,senha) {
     const consumidor = await this.clienteGateway.getByEmail(email);
+    console.table("json", consumidor);
     if (consumidor && consumidor.senha === senha) {
-        console.log("Login válido");
+        
         return consumidor;
     } else {
         console.log("Email ou senha inválidos");
-        return false
+        return null;
         }
     }
 

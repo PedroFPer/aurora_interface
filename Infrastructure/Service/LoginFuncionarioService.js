@@ -9,10 +9,10 @@ export class LoginFuncionarioService{
     const funcionario = await this.funcionarioGateway.getByCpf(cpf);
     if (funcionario && funcionario.senha === senha) {
         console.log("Login válido");
-        return true
+        return funcionario;
     } else {
         console.log("CPF ou senha inválidos");
-        return false
+        return null;
         }
     }
 }
