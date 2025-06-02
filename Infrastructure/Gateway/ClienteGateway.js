@@ -23,6 +23,7 @@ export class ClienteGateway {
 
   async getByEmail(clienteEmail) {
     const { data } = await httpClient.get(`/cliente/email/${clienteEmail}`);
+    console.log("JSON recebido do backend:", data); 
     return Cliente.fromJSON(data);
   }
 

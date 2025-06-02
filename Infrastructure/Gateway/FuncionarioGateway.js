@@ -31,7 +31,7 @@ export class FuncionarioGateway {
     const { data } = await httpClient.get(`/funcionario/cpf/${cpf}`);
     return Funcionario.fromJSON(data);
   }
-p
+
 
   async listAll() {
     const { data } = await httpClient.get('/funcionario');
