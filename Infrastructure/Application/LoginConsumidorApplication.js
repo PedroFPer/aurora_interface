@@ -28,7 +28,6 @@ form.addEventListener("submit", async (event) => {
     if (temErro) return;
 
     try {
-
         const cliente = await service.verificar_login(email, senha);
 
         if (cliente != null) {
