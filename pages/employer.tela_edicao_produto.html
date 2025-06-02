@@ -87,7 +87,7 @@
                 <div class="product-pricing">
                     <input id="preco_produto" class="price" type="text">
                     <div id="erro-preco" class="mensagem-erro"></div>
-                    
+
                 </div>
 
                 <div class="size-selector">
@@ -118,7 +118,10 @@
                 </div>
             </div>
 
-            <div id="conteiner_btn" class="col-12"><button id="btnSalvarAlter" class="col-10">Salvar Alterações</button></div>
+            <div id="conteiner_btn" class="col-12">
+                <button id="btnSalvarAlter" class="col-10">Salvar Alterações</button>
+                <button id="btnApagarProduto" class="col-10">Apagar Produto</button>
+            </div>
         </div>
     </main>
 
@@ -205,6 +208,7 @@
     <script type="module" src="/Infrastructure/Interacoes/ImportarPopups.js"></script>
     <script type="module" src="/Infrastructure/Application/EdicaoProdutoApplication.js"></script>
     <script type="module" src="/Infrastructure/Interacoes/EdicaoProduto.js"></script>
+    <script type="module" src="/Infrastructure/Application/DeletarProdutoApplication.js"></script>
     <script type="module" src="/Infrastructure/Persistence/VericacaoAcesso.js"></script>
 </body>
 
