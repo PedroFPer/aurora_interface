@@ -8,7 +8,7 @@ body {
     margin: 0%;
 }
 
-body a{
+body a {
     text-decoration: none;
     color: inherit;
 }
@@ -203,7 +203,7 @@ header {
 
 }
 
-.pop_up_consumidor_deslogado{
+.pop_up_consumidor_deslogado {
     top: 6em;
     left: 65%;
 }
@@ -233,7 +233,7 @@ header {
     z-index: 1000;
 }
 
-#pop_up_consumidor {
+#pop_up_consumidor_logado {
     top: 6em;
     left: 73%;
 }
@@ -265,12 +265,19 @@ header {
 .pop_up_usuario_logado a {
     font-size: 1.1em;
 
-    
+
 }
 
 .option_encerrar_sessao {
     margin-top: 2em;
 }
+
+.option_encerrar_sessao button{
+    all: unset;
+    cursor: pointer;
+}
+
+
 
 @media (max-width: 1200px) {
 
@@ -477,7 +484,7 @@ header {
         gap: 0.3em;
     }
 
-     #pop_up_consumidor {
+    #pop_up_consumidor {
         top: 4.5em;
         left: 48%;
     }
