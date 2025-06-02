@@ -1,5 +1,6 @@
 import { ValidarUsuario } from "../Validators/ValidarUsuario.js"
-import {LoginConsumidorService} from "../Service/LoginConsumidorService.js"
+import { LoginConsumidorService } from "../Service/LoginConsumidorService.js"
+import { Cliente } from "../Entities/Cliente.js";
 
 
 const form = document.getElementById("form_login_consumidor");
@@ -24,11 +25,15 @@ form.addEventListener("submit", async (event) => {
 
     const temErro = mensagemErroEmail || mensagemErroSenha;
 
-     if (temErro) return;
+    if (temErro) return;
 
-     try {
-        await service.verificar_login(email,senha);
-        alert("Cadastro realizado com sucesso! Redirecionando para a tela inicial. Faça o login para continuar.");
+    try {
+
+        const cliente = await service.verificar_login(email, senha);
+        alert("Login realizado com sucesso! Redirecionando para a tela inicial. Faça o login para continuar.");
+        sessionStorage.setItem("clienteInfo", JSON.stringify(cliente));
+        sessionStorage.setItem("userType", "costumer");
+
         form.reset();
 
         setTimeout(() => {

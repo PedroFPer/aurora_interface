@@ -9,7 +9,7 @@ import { ClienteGateway } from "../Gateway/ClienteGateway.js"
     const consumidor = await this.clienteGateway.getByEmail(email);
     if (consumidor && consumidor.senha === senha) {
         console.log("Login válido");
-        return true
+        return consumidor;
     } else {
         console.log("Email ou senha inválidos");
         return false

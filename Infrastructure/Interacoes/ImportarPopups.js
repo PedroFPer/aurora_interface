@@ -1,12 +1,37 @@
+import { verificarPersistence } from "../Persistence/VerificarPersistence.js";
+
 document.addEventListener('DOMContentLoaded', () => {
-    carregarPopupCarrinhoDeslogado();
-    carregarPopupConsumidorDeslogado();
-    carregarPopupConsumidorLogado();
-    carregarPopupFuncionarioAdm();
-    carregarPopupFuncionarioCarrinho();
-    carregarPopupFuncionarioGerenFunc();
-    carregarPopupFuncionarioGerenProdu();
-    carregarPopupSuporteDeslogado();
+    const clienteInfo = verificarPersistence();
+
+    if (clienteInfo === "deslogado") {
+        carregarPopupSuporteDeslogado();
+        carregarPopupCarrinhoDeslogado();
+        carregarPopupConsumidorDeslogado();
+        return;
+    } else {
+
+        if (clienteInfo.userType === "costumer") {
+            carregarPopupConsumidorLogado();
+            carregarPopupSuporteDeslogado();
+        }
+
+        if (clienteInfo.cargo) {
+            if (clienteInfo.cargo === "ADMINISTRADOR_GERAL") {
+                carregarPopupFuncionarioAdm();
+            }
+
+            if (clienteInfo.cargo === "GERENCIADOR_FUNCIONARIOS") {
+                carregarPopupFuncionarioGerenFunc();
+            }
+
+            if (clienteInfo.cargo === "GERENCIADOR_ROUPAS") {
+                carregarPopupFuncionarioGerenProdu();
+            }
+
+            carregarPopupFuncionarioCarrinho();
+        }
+
+    }
 });
 
 async function carregarPopupCarrinhoDeslogado() {
