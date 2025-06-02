@@ -1,13 +1,15 @@
 export class ValidarUsuario {
     static validarNome(nome) {
         if (!nome) {
-            console.log("*Campo obrigatório");
             return "*Campo obrigatório";
         }
 
-        if (nome.length < 2 || nome.length > 110) {
-            console.log("*O nome deve conter no mínimo dois caracteres");
-            return "*O nome deve conter no mínimo dois caracteres";
+        if (nome.length < 2) {
+            return "*O campo deve conter no mínimo dois caracteres";
+        }
+
+        if (nome.length > 250) {
+            return "*O campo deve conter no maximo 250 caracteres";
         }
 
         return null;
@@ -114,6 +116,14 @@ export class ValidarUsuario {
         }
 
         return null;
+    }
+
+    static validarArray(arrayTamanho) {
+        if (arrayTamanho.length === 0) {
+            return "*Por favor, selecione ao menos uma opção"
+        } else {
+            return null;
+        }
     }
 
 
