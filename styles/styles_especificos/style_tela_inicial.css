@@ -305,6 +305,10 @@ main {
     color: white;
 }
 
+.conteiner_produtos{
+    cursor: pointer;
+}
+
 
 @media (max-width: 1200px) {
     .conteiner_banner {

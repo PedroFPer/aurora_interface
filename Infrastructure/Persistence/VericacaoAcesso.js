@@ -11,7 +11,14 @@ const permissoes = {
     "tela_login_funcionario.html",
     "tela_login_consumidor.html",
     "tela_cadastro_consumidor.html",
-    "tela_listar_produto.html"
+    "tela_listar_produto.html",
+    "tela_produto_consumido_produto_1.html",
+    "tela_produto_consumido_produto_2.html",
+    "tela_produto_consumido_produto_3.html",
+    "tela_produto_consumido_produto_4.html",
+    "tela_produto_consumido_produto_5.html",
+    "tela_produto_consumido_produto_6.html",
+    "tela_produto_consumido_produto_7.html",
   ],
 
   costumer: [
