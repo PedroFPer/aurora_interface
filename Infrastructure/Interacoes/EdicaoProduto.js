@@ -1,5 +1,4 @@
 import { ProdutoConsumidorService } from "../Service/ProdutoConsumidorService.js";
-import { alterarProduto } from "../Application/TESTE.EdicaoProdutoApplication.js";
 
 const btnArquivo = document.getElementById('btnAlterar');
 const inputFile = document.getElementById('inputFile');
@@ -45,14 +44,13 @@ window.addEventListener('DOMContentLoaded', async () => {
 
         tituloProduto.placeholder = produto.nome;
         precoProduto.placeholder = `R$ ${produto.precoUnitario.toFixed(2)}`;
-        parcelamentoOutput.innerText = `Em até 3 vezes de R$  ${parcelamento(produto.precoUnitario.toFixed(2))}`;
         descricao_produto.placeholder = produto.descricao;
         imagemProduto.src = imageUrl;
 
         //É resposável por adicionar a funcionalidade do input file no botão
         let novaImagemFile = null; 
 
-        btnAlterar.addEventListener('click', () => {
+        btnArquivo.addEventListener('click', () => {
             inputFile.click(); 
         });
 
@@ -73,36 +71,20 @@ window.addEventListener('DOMContentLoaded', async () => {
         const tamanhosDisponiveis = 'P' //Tem que ver com o banco de dados para puxar os tamanhos
 
         //É responsável pela interações entre os botões e armazenar os tamanhos em um array
-        const tamanhosSelecionados = [];
 
         selectTamanho.forEach(tamanhos => {
             tamanhos.addEventListener('click', () => {
                 const tamanhosDisponiveis = tamanhos.textContent.trim();
 
                 if (tamanhosSelecionados.includes(tamanhosDisponiveis)) {
-                    const index = tamanhosSelecionados.indexOf(tamanhosDisponiveis);
-                    tamanhosSelecionados.splice(index, 1);
                     tamanhos.classList.remove('active');
                 } else {
-                    tamanhosSelecionados.push(tamanhosDisponiveis);
                     tamanhos.classList.add('active');
                 }
                 console.log(tamanhosSelecionados);
             });
         });
 
-        //Defini em um botão a chamada de uma função responsável pela verificação e futuramente a alteração no produto
-        btnSalvarAlter.addEventListener('click', () => {
-            const dadosProduto = {
-                nome: tituloProduto.value,
-                preco: precoProduto.value,
-                descricao: descricao_produto.value,
-                tamanhos: [...tamanhosSelecionados],
-                imagemFile: novaImagemFile
-            };
-
-            alterarProduto(dadosProduto);
-        });
 
 
     } catch (error) {
