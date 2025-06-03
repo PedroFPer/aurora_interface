@@ -31,7 +31,6 @@ form.addEventListener("submit", async (event) => {
         const cliente = await service.verificar_login(email, senha);
 
         if (cliente != null) {
-            alert("Login realizado com sucesso! Redirecionando para a tela inicial. Faça o login para continuar.");
             sessionStorage.setItem("clienteInfo", JSON.stringify(cliente));
             sessionStorage.setItem("userType", "costumer");
 

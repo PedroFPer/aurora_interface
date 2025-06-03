@@ -68,9 +68,6 @@ form.addEventListener("submit", async (event) => {
         alert("Produto cadastrado com sucesso!");
         form.reset();
 
-        setTimeout(() => {
-            window.location.href = "/index.html"; 
-        }, 2000);
     } catch (erro) {
         alert("Não foi possível concluir o cadastro do produto. Verifique sua conexão com a internet e tente novamente. Caso o problema persista, entre em contato com o suporte técnico.");
         console.error("Erro ao cadastrar produto:", erro);
