@@ -472,3 +472,9 @@ main {
     }
 
 }
+
+@media (max-width: 700px) {
+  .conteiner_patrocinadores {
+    display: none;
+  }
+}
