@@ -1,8 +1,10 @@
 import { verificarPersistence } from "./VerificarPersistence.js";
 
+
 const clienteInfo = verificarPersistence();
 const pathname = window.location.pathname;
-const pageName = pathname.split("/").pop(); 
+const pageName = pathname.split("/").pop();
+
 
 const permissoes = {
   geral: [
@@ -21,13 +23,19 @@ const permissoes = {
     "tela_produto_consumido_produto_7.html",
   ],
 
+
+  paginasDeLoginOuCadastro: [
+    "tela_login_funcionario.html",
+    "tela_login_consumidor.html",
+    "tela_cadastro_consumidor.html"
+  ],
+
+
   costumer: [
-    "consumer.tela_adicionar_endereco.html",
     "consumer.tela_carrinho.html",
-    "consumer.tela_compras.html",
-    "consumer.tela_detalhes_pedidos.html",
     "consumer.tela_pedidos.html"
   ],
+
 
   ADMINISTRADOR_GERAL: [
     "employer.tela_edicao_produto.html",
@@ -35,36 +43,58 @@ const permissoes = {
     "employer.tela_adicionar_produto.html"
   ],
 
+
   GERENCIADOR_ROUPAS: [
     "employer.tela_edicao_produto.html",
     "employer.tela_adicionar_produto.html"
   ],
+
 
   GERENCIADOR_FUNCIONARIOS: [
     "employer.tela_cadastro_funcionario.html"
   ]
 };
 
+
+
+
+
+
 function temPermissao(clienteInfo, pageName) {
+  if (
+    clienteInfo !== "deslogado" &&
+    permissoes.paginasDeLoginOuCadastro.includes(pageName)
+  ) {
+    window.location.href = "/pages/index.html";
+    return false;
+  }
+
+
   if (permissoes.geral.includes(pageName)) {
     return true;
   }
 
+
   if (clienteInfo === "deslogado") {
+    permissoes.paginasDeLoginOuCadastro.includes(pageName)
     return false;
   }
+
 
   if (clienteInfo.userType === "costumer") {
     return permissoes.costumer.includes(pageName);
   }
+
 
   if (clienteInfo.userType === "employer") {
     const cargo = clienteInfo.cargo;
     return permissoes[cargo]?.includes(pageName) || false;
   }
 
+
   return false;
 }
+
 
 if (!temPermissao(clienteInfo, pageName)) {
   window.location.href = "/pages/acesso-negado.html";

@@ -202,6 +202,10 @@
   margin-bottom: 10px;
 }
 
+#btn_adicionar_carrinho{
+  background-color: gray;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .product-page {

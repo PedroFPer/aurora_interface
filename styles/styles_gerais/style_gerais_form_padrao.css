@@ -233,6 +233,32 @@ main {
     font-size: 0.9em;
 }
 
+#checkbox_tamanhos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+     gap: 1.2em;
+}
+
+#checkbox_tamanhos label{
+    height: 4em;
+    width: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#checkbox_tamanhos input{
+    height: 2em;
+    width: 2em;
+
+    text-align: center;
+}
+
 
 
 @media (max-width: 992px) {
@@ -274,7 +300,8 @@ main {
     }
 
     .conteiner_form_group {
-        gap: 2em;
+        
+        gap: 5em;
     }
 
     .conteiner_form_group p {
@@ -316,10 +343,25 @@ main {
 
     }
 
-    .conteiner_form_group {
+    #conteiner_login figure{
+        height: 60%;
+        width: 60%;
+    }
 
+    #conteiner_login button{
+        font-size: 0.9em;
+        height: 4em;
+    }
+
+    .conteiner_form_group {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        height: auto;
         gap: 3em;
     }
+
 
     .conteiner_form_group p {
         font-size: 0.8em;
@@ -328,6 +370,8 @@ main {
     .conteiner_link_form p {
         font-size: 1em;
     }
+
+  
 }
 
 
