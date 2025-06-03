@@ -1,4 +1,4 @@
-import { ListarProdutosService } from "../Service/ListarProdutosService.js";
+import { ListarProdutosService } from "../Service/ListarProdutosService.js"
 import { verificarPersistence } from "../Persistence/VerificarPersistence.js";
 
 
