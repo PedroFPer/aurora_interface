@@ -173,10 +173,8 @@ main {
 .conteiner_imagem_produto img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: top center;
-
     border-radius: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -242,71 +240,23 @@ main {
 }
 
 .conteiner_text {
-    height: 10em;
-
+    height: 8em; 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;    
+    justify-content: center; 
     flex-direction: column;
-
     color: white;
-
+    text-align: center;
+    padding: 0 1em; 
 }
 
 .conteiner_text h2 {
-    font-size: 1.8em;
+    font-size: 2.2em; 
     font-weight: 900;
-    text-align: center;
+    margin: 0;
+    margin-top: 1.7em; 
+    line-height: 1.5;  
 }
-
-.conteiner_text p {
-    text-align: center;
-
-    margin: 0%;
-    padding: 0%;
-}
-
-
-.conteiner_input_submit {
-    height: 1em;
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-
-}
-
-.conteiner_input_submit input {
-    width: 100%;
-    height: 3em;
-    border-radius: 10px;
-
-    text-indent: 1em;
-
-}
-
-.conteiner_input_submit button {
-    width: 6em;
-    height: 2.8em;
-
-    position: absolute;
-    top: 50%;
-    right: 0.8em;
-    transform: translateY(-50%);
-
-    border: none;
-    border-radius: 0 10px 10px 0;
-    background-color: black;
-
-    color: white;
-}
-
-.conteiner_produtos{
-    cursor: pointer;
-}
-
 
 @media (max-width: 1200px) {
     .conteiner_banner {
@@ -379,8 +329,6 @@ main {
     .conteiner_text p {
         font-size: 1.1em;
     }
-
-
 }
 
 @media (max-width: 768px) {
