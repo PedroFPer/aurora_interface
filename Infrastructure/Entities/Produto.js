@@ -1,11 +1,12 @@
 export class Produto {
-  constructor(nome, descricao, precoUnitario, categoria, imagem, id = null) {
+  constructor(nome, descricao, precoUnitario, categoria, imagem, id = null, tamanhos = []) {
     this.id = id;
     this.nome = nome;
     this.descricao = descricao;
-    this.precoUnitario = precoUnitario;
+    this.precoUnitario = parseFloat(precoUnitario);
     this.categoria = categoria;
-    this.imagem = imagem; 
+    this.imagem = imagem;
+    this.tamanhos = tamanhos;
   }
 
   toJSON() {
@@ -14,9 +15,10 @@ export class Produto {
       descricao: this.descricao,
       precoUnitario: this.precoUnitario,
       categoria: this.categoria,
-      imagem: Array.isArray(this.imagem) ? this.imagem : Array.from(this.imagem)
+      imagem: Array.isArray(this.imagem) ? this.imagem : Array.from(this.imagem),
+      tamanhos: this.tamanhos.map(t => ({ tamanho: t })) 
     };
-    if(this.id !== null) {
+    if (this.id !== null) {
       json.id = this.id;
     }
     return json;
@@ -29,7 +31,8 @@ export class Produto {
       json.precoUnitario,
       json.categoria,
       json.imagem || null,
-      json.id || null
+      json.id || null,
+      json.tamanhos?.map(t => t.tamanho) || []
     );
   }
 }
