@@ -8,8 +8,24 @@ export class ValidarUsuario {
             return "*O campo deve conter no mínimo dois caracteres";
         }
 
-        if (nome.length > 250) {
-            return "*O campo deve conter no maximo 250 caracteres";
+        if (nome.length > 100) {
+            return "*O campo deve conter no maximo 100 caracteres";
+        }
+
+        return null;
+    }
+
+    static validarDescricao(descricao){
+        if (!descricao) {
+            return "*Campo obrigatório";
+        }
+
+        if (descricao.length < 2) {
+            return "*O campo deve conter no mínimo dois caracteres";
+        }
+
+        if (descricao.length > 1000) {
+            return "*O campo deve conter no maximo 100 caracteres";
         }
 
         return null;

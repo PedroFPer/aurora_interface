@@ -21,6 +21,7 @@ export class ProdutoGateway {
     }
     try {
       const { data } = await httpClient.put(`/produto/${produtoId}`, produto.toJSON());
+      console.table("update:",produto.tamanhos);
       return Produto.fromJSON(data);
     } catch (error) {
       console.error(`Erro ao atualizar produto ${produtoId}:`, error);
@@ -51,7 +52,6 @@ export class ProdutoGateway {
   async listAll() {
     try {
       const { data } = await httpClient.get('/produto');
-      console.table(data);
       if (!Array.isArray(data)) {
         throw new Error("Resposta inválida: esperado array de produtos");
       }
