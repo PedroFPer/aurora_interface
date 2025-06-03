@@ -29,7 +29,7 @@ form.addEventListener("submit", async (event) => {
     const mensagemErroPreco = ValidarUsuario.validarPreco(preco);
     const mensagemErroCategoria = ValidarUsuario.validarSelect(categoria);
     const mensagemErroTamanho = ValidarUsuario.validarArray(tamanho);
-    const mensagemDescricaoProduto = ValidarUsuario.validarNome(descricao_produto);
+    const mensagemDescricaoProduto = ValidarUsuario.validarDescricao(descricao_produto);
     const mensagemImagem = ValidarUsuario.validarImagem(imagemFile);
 
     outputErroNome.textContent = mensagemErroNome || '';
