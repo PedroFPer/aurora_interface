@@ -1,9 +1,24 @@
 import { ListarProdutosService } from "../Service/ListarProdutosService.js";
+import { verificarPersistence } from "../Persistence/VerificarPersistence.js";
+
+
 
 window.addEventListener('DOMContentLoaded', async () => {
-
   const container = document.getElementById("conteiner_lista_produto");
   const service = new ListarProdutosService();
+  const clienteInfo = verificarPersistence();
+
+  let linkPagProduto = null;
+
+  if (
+    clienteInfo.userType === "employer" &&
+    (clienteInfo.cargo === "ADMINISTRADOR_GERAL" || clienteInfo.cargo === "GERENCIADOR_ROUPAS")
+  ) {
+    linkPagProduto = "/pages/employer.tela_edicao_produto.html";
+  } else {
+    linkPagProduto = "/pages/tela_produto_consumidor.html";
+  }
+
 
   try {
     const produtos = await service.executar();
@@ -25,7 +40,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         `;
 
       card.onclick = () => {
-        window.location.href = `customer.tela_listar_produto.html?id=${produto.id}`;
+        window.location.href = `${linkPagProduto}?id=${produto.id}`;
       };
 
       container.appendChild(card);
