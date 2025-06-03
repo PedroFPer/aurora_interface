@@ -243,7 +243,7 @@ header {
     margin: 0%;
     padding: 0%;
 
-    gap: 0.7em;
+    gap: 1em;
 
     list-style: none;
 }
@@ -264,31 +264,31 @@ header {
 }
 
 .titulo_menu_pop {
-    top: 60%;
+    top: 5.5em;
     left: 40%;
 }
 
 
 .pop_up_posicao_user_deslogado {
-    top: 6em;
+    top: 5.5em;
     left: 65%;
 }
 
 
 .pop_up_posicao_suporte {
-    top: 6em;
-    left: 64%;
+    top: 5.5em;
+    left: 63%;
 }
 
 
 .pop_up_posicao_carrinho {
-    top: 6em;
+    top: 5.5em;
     left: 60%;
 }
 
 
 .pop_up_posicao_menu_user {
-    top: 6em;
+    top: 5.5em;
     left: 73%;
 }
 
@@ -408,8 +408,14 @@ header {
     }
 
     .conteiner_nav_option {
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: 100%;
+    }
+
+     header {
+        height: 5em;
+        margin-top: 0em;
+        padding: 0.5%;
     }
 
     .pop_up_usuario_deslogado {
@@ -469,7 +475,7 @@ header {
 
     .pop_up_posicao_suporte {
         top: 4.5em;
-        left: 53%;
+        left: 50%;
     }
 
 
@@ -561,13 +567,13 @@ header {
 
     .pop_up_posicao_suporte {
         top: 4.5em;
-        left: 34%;
+        left: 30%;
     }
 
 
     .pop_up_posicao_carrinho {
         top: 4.5em;
-        left: 50%;
+        left: 47%;
     }
 
 
@@ -582,8 +588,11 @@ header {
 @media(max-width :576px) {
 
     header {
-        height: 4em;
+        height: 5em;
+        margin-top: 0em;
+        padding: 0.5%;
     }
+
 
     .conteiner_logo {
         height: 3m;
@@ -591,9 +600,27 @@ header {
     }
 
     .conteiner_logo figure {
-        width: 70%;
-        height: 70%;
+        width: 100%;
+        height: 100%;
     }
+
+    
+.conteiner_nav_option {
+    width: 90%;
+    height: 90%;
+
+}
+
+.conteiner_nav_option figure {
+    width: 100%;
+    height: 100%;
+}
+
+.conteiner_nav_option img {
+    height: 100%;
+    width: 100%;
+
+}
 
     .conteiner_nav_option {
         gap: 0.8em;
@@ -628,13 +655,13 @@ header {
 
     .pop_up_posicao_suporte {
         top: 4.5em;
-        left: 34%;
+        left: 30%;
     }
 
 
     .pop_up_posicao_carrinho {
         top: 4.5em;
-        left: 40%;
+        left: 38%;
     }
 
 

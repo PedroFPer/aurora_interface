@@ -4,13 +4,13 @@ main {
     width: 100vw;
     height: auto;
 
-    padding: 0%;
-    margin: 0%;
+    padding: 0em;
+    margin: 0em;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 
     flex-wrap: wrap;
 
@@ -197,20 +197,20 @@ main {
 
 .conteiner_preco_produto_em_alta {
     display: flex;
-    align-items: center; 
+    align-items: center;
     flex-direction: row;
     margin-top: 1em;
 }
 
 .conteiner_preco_produto_em_alta p {
     margin: 0;
-    margin-right: auto; 
+    margin-right: auto;
     font-size: 1em;
-    line-height: 1; 
+    line-height: 1;
 }
 
 .conteiner_preco_produto_em_alta figure {
-    width: 1.5em; 
+    width: 1.5em;
     height: 1.5em;
     margin: 0;
     margin-left: auto;
@@ -240,22 +240,22 @@ main {
 }
 
 .conteiner_text {
-    height: 8em; 
+    height: 8em;
     display: flex;
-    align-items: center;    
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     color: white;
     text-align: center;
-    padding: 0 1em; 
+    padding: 0 1em;
 }
 
 .conteiner_text h2 {
-    font-size: 2.2em; 
+    font-size: 2.2em;
     font-weight: 900;
     margin: 0;
-    margin-top: 1.7em; 
-    line-height: 1.5;  
+    margin-top: 1.7em;
+    line-height: 1.5;
 }
 
 @media (max-width: 1200px) {
@@ -333,9 +333,9 @@ main {
 
 @media (max-width: 768px) {
     .conteiner_banner {
-        height: auto;
 
-        margin: 1em 0 0.5em 0;
+        padding: 0em;
+        margin: 1em 0em 0.5em 0em;
     }
 
 
@@ -405,6 +405,8 @@ main {
         font-size: 0.8em;
     }
 
+ 
+
 
 }
 
@@ -435,7 +437,7 @@ main {
     .conteiner_descricao_produto_em_alta {
         margin: 1.5em 0.5em 1em 0.5em;
 
-        font-size: 0.5em;
+        font-size: 0.45em;
     }
 
     .conteiner_newsletter_signup {
@@ -474,7 +476,7 @@ main {
 }
 
 @media (max-width: 700px) {
-  .conteiner_patrocinadores {
-    display: none;
-  }
+    .conteiner_patrocinadores {
+        display: none;
+    }
 }

@@ -32,10 +32,7 @@ const permissoes = {
 
 
   costumer: [
-    "consumer.tela_adicionar_endereco.html",
     "consumer.tela_carrinho.html",
-    "consumer.tela_compras.html",
-    "consumer.tela_detalhes_pedidos.html",
     "consumer.tela_pedidos.html"
   ],
 
