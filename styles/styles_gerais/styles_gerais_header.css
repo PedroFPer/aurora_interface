@@ -205,15 +205,7 @@ header {
 
 }
 
-.pop_up_consumidor_deslogado {
-    top: 6em;
-    left: 65%;
-}
 
-.pop_up_carrinho {
-    top: 6em;
-    left: 60%;
-}
 
 .pop_up_usuario_logado {
     height: auto;
@@ -235,20 +227,7 @@ header {
     z-index: 1000;
 }
 
-#pop_up_consumidor_logado {
-    top: 6em;
-    left: 73%;
-}
 
-.pop_up_funcionario{
-    top: 6em;
-    left: 73%;
-}
-
-#pop_up_suporte_deslogado {
-    top: 6em;
-    left: 64%;
-}
 
 .pop_up_usuario_logado h2 {
     width: 100%;
@@ -284,6 +263,38 @@ header {
     cursor: pointer;
 }
 
+.titulo_menu_pop {
+    top: 60%;
+    left: 40%;
+}
+
+
+.pop_up_posicao_user_deslogado {
+    top: 6em;
+    left: 65%;
+}
+
+
+.pop_up_posicao_suporte {
+    top: 6em;
+    left: 64%;
+}
+
+
+.pop_up_posicao_carrinho {
+    top: 6em;
+    left: 60%;
+}
+
+
+.pop_up_posicao_menu_user {
+    top: 6em;
+    left: 73%;
+}
+
+
+
+
 
 
 @media (max-width: 1200px) {
@@ -307,8 +318,6 @@ header {
 
         gap: 0.5em;
 
-        top: 5em;
-        left: 56%;
     }
 
     .pop_up_usuario_deslogado h2 {
@@ -335,15 +344,7 @@ header {
 
     }
 
-    #pop_up_consumidor {
-        top: 6em;
-        left: 65%;
-    }
 
-    .pop_up_funcionario {
-        top: 6em;
-        left: 53%;
-    }
 
     .pop_up_usuario_logado h2 {
 
@@ -364,6 +365,30 @@ header {
     .option_encerrar_sessao {
         margin-top: 2em;
     }
+
+    .pop_up_posicao_user_deslogado {
+        top: 5.5em;
+        left: 56%;
+    }
+
+
+    .pop_up_posicao_suporte {
+        top: 5.5em;
+        left: 52%;
+    }
+
+
+    .pop_up_posicao_carrinho {
+        top: 5.5em;
+        left: 49.5%;
+    }
+
+
+    .pop_up_posicao_menu_user {
+        top: 5.5em;
+        left: 64%;
+    }
+
 
 
 }
@@ -415,15 +440,6 @@ header {
         gap: 0.3em;
     }
 
-    #pop_up_consumidor {
-        top: 5em;
-        left: 65%;
-    }
-
-    .pop_up_funcionario {
-        top: 5em;
-        left: 54%;
-    }
 
     .pop_up_usuario_logado h2 {
 
@@ -444,6 +460,30 @@ header {
     .option_encerrar_sessao {
         margin-top: 2em;
     }
+
+    .pop_up_posicao_user_deslogado {
+        top: 4.5em;
+        left: 56%;
+    }
+
+
+    .pop_up_posicao_suporte {
+        top: 4.5em;
+        left: 53%;
+    }
+
+
+    .pop_up_posicao_carrinho {
+        top: 4.5em;
+        left: 50%;
+    }
+
+
+    .pop_up_posicao_menu_user {
+        top: 4.5em;
+        left: 64%;
+    }
+
 }
 
 
@@ -491,15 +531,7 @@ header {
         gap: 0.3em;
     }
 
-    #pop_up_consumidor {
-        top: 4.5em;
-        left: 48%;
-    }
-
-    .pop_up_funcionario {
-        top: 4.5em;
-        left: 34%;
-    }
+    
 
     .pop_up_usuario_logado h2 {
 
@@ -520,6 +552,30 @@ header {
     .option_encerrar_sessao {
         margin-top: 2em;
     }
+
+    .pop_up_posicao_user_deslogado {
+        top: 4.5em;
+        left: 55%;
+    }
+
+
+    .pop_up_posicao_suporte {
+        top: 4.5em;
+        left: 34%;
+    }
+
+
+    .pop_up_posicao_carrinho {
+        top: 4.5em;
+        left: 50%;
+    }
+
+
+    .pop_up_posicao_menu_user {
+        top: 4.5em;
+        left: 48%;
+    }
+
 
 }
 
@@ -545,8 +601,6 @@ header {
 
     .pop_up_usuario_deslogado {
         gap: 0.5em;
-        top: 5em;
-        left: 48%;
     }
 
     .pop_up_usuario_deslogado h2 {
@@ -565,4 +619,28 @@ header {
         height: 2.7em;
 
     }
+
+     .pop_up_posicao_user_deslogado {
+        top: 4.5em;
+        left: 48%;
+    }
+
+
+    .pop_up_posicao_suporte {
+        top: 4.5em;
+        left: 34%;
+    }
+
+
+    .pop_up_posicao_carrinho {
+        top: 4.5em;
+        left: 40%;
+    }
+
+
+    .pop_up_posicao_menu_user {
+        top: 4.5em;
+        left: 48%;
+    }
+
 }
