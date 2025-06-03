@@ -16,11 +16,9 @@ export class Produto {
       precoUnitario: this.precoUnitario,
       categoria: this.categoria,
       imagem: Array.isArray(this.imagem) ? this.imagem : Array.from(this.imagem),
+      id:this.id,
       tamanhos: this.tamanhos.map(t => ({ tamanho: t })) 
     };
-    if (this.id !== null) {
-      json.id = this.id;
-    }
     return json;
   }
 
@@ -30,8 +28,8 @@ export class Produto {
       json.descricao,
       json.precoUnitario,
       json.categoria,
-      json.imagem || null,
-      json.id || null,
+      json.imagem,
+      json.id,
       json.tamanhos?.map(t => t.tamanho) || []
     );
   }

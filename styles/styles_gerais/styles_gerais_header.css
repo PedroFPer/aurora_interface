@@ -205,15 +205,7 @@ header {
 
 }
 
-.pop_up_consumidor_deslogado {
-    top: 6em;
-    left: 65%;
-}
 
-.pop_up_carrinho {
-    top: 6em;
-    left: 60%;
-}
 
 .pop_up_usuario_logado {
     height: auto;
@@ -235,20 +227,7 @@ header {
     z-index: 1000;
 }
 
-#pop_up_consumidor_logado {
-    top: 6em;
-    left: 73%;
-}
 
-.pop_up_funcionario{
-    top: 6em;
-    left: 73%;
-}
-
-#pop_up_suporte_deslogado {
-    top: 6em;
-    left: 64%;
-}
 
 .pop_up_usuario_logado h2 {
     width: 100%;
@@ -264,7 +243,7 @@ header {
     margin: 0%;
     padding: 0%;
 
-    gap: 0.7em;
+    gap: 1em;
 
     list-style: none;
 }
@@ -283,6 +262,38 @@ header {
     all: unset;
     cursor: pointer;
 }
+
+.titulo_menu_pop {
+    top: 5.5em;
+    left: 40%;
+}
+
+
+.pop_up_posicao_user_deslogado {
+    top: 5.5em;
+    left: 65%;
+}
+
+
+.pop_up_posicao_suporte {
+    top: 5.5em;
+    left: 63%;
+}
+
+
+.pop_up_posicao_carrinho {
+    top: 5.5em;
+    left: 60%;
+}
+
+
+.pop_up_posicao_menu_user {
+    top: 5.5em;
+    left: 73%;
+}
+
+
+
 
 
 
@@ -307,8 +318,6 @@ header {
 
         gap: 0.5em;
 
-        top: 5em;
-        left: 56%;
     }
 
     .pop_up_usuario_deslogado h2 {
@@ -335,15 +344,7 @@ header {
 
     }
 
-    #pop_up_consumidor {
-        top: 6em;
-        left: 65%;
-    }
 
-    .pop_up_funcionario {
-        top: 6em;
-        left: 53%;
-    }
 
     .pop_up_usuario_logado h2 {
 
@@ -365,6 +366,30 @@ header {
         margin-top: 2em;
     }
 
+    .pop_up_posicao_user_deslogado {
+        top: 5.5em;
+        left: 56%;
+    }
+
+
+    .pop_up_posicao_suporte {
+        top: 5.5em;
+        left: 52%;
+    }
+
+
+    .pop_up_posicao_carrinho {
+        top: 5.5em;
+        left: 49.5%;
+    }
+
+
+    .pop_up_posicao_menu_user {
+        top: 5.5em;
+        left: 64%;
+    }
+
+
 
 }
 
@@ -383,8 +408,14 @@ header {
     }
 
     .conteiner_nav_option {
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: 100%;
+    }
+
+     header {
+        height: 5em;
+        margin-top: 0em;
+        padding: 0.5%;
     }
 
     .pop_up_usuario_deslogado {
@@ -415,15 +446,6 @@ header {
         gap: 0.3em;
     }
 
-    #pop_up_consumidor {
-        top: 5em;
-        left: 65%;
-    }
-
-    .pop_up_funcionario {
-        top: 5em;
-        left: 54%;
-    }
 
     .pop_up_usuario_logado h2 {
 
@@ -444,6 +466,30 @@ header {
     .option_encerrar_sessao {
         margin-top: 2em;
     }
+
+    .pop_up_posicao_user_deslogado {
+        top: 4.5em;
+        left: 56%;
+    }
+
+
+    .pop_up_posicao_suporte {
+        top: 4.5em;
+        left: 50%;
+    }
+
+
+    .pop_up_posicao_carrinho {
+        top: 4.5em;
+        left: 50%;
+    }
+
+
+    .pop_up_posicao_menu_user {
+        top: 4.5em;
+        left: 64%;
+    }
+
 }
 
 
@@ -491,15 +537,7 @@ header {
         gap: 0.3em;
     }
 
-    #pop_up_consumidor {
-        top: 4.5em;
-        left: 48%;
-    }
-
-    .pop_up_funcionario {
-        top: 4.5em;
-        left: 34%;
-    }
+    
 
     .pop_up_usuario_logado h2 {
 
@@ -521,13 +559,40 @@ header {
         margin-top: 2em;
     }
 
+    .pop_up_posicao_user_deslogado {
+        top: 4.5em;
+        left: 55%;
+    }
+
+
+    .pop_up_posicao_suporte {
+        top: 4.5em;
+        left: 30%;
+    }
+
+
+    .pop_up_posicao_carrinho {
+        top: 4.5em;
+        left: 47%;
+    }
+
+
+    .pop_up_posicao_menu_user {
+        top: 4.5em;
+        left: 48%;
+    }
+
+
 }
 
 @media(max-width :576px) {
 
     header {
-        height: 4em;
+        height: 5em;
+        margin-top: 0em;
+        padding: 0.5%;
     }
+
 
     .conteiner_logo {
         height: 3m;
@@ -535,9 +600,27 @@ header {
     }
 
     .conteiner_logo figure {
-        width: 70%;
-        height: 70%;
+        width: 100%;
+        height: 100%;
     }
+
+    
+.conteiner_nav_option {
+    width: 90%;
+    height: 90%;
+
+}
+
+.conteiner_nav_option figure {
+    width: 100%;
+    height: 100%;
+}
+
+.conteiner_nav_option img {
+    height: 100%;
+    width: 100%;
+
+}
 
     .conteiner_nav_option {
         gap: 0.8em;
@@ -545,8 +628,6 @@ header {
 
     .pop_up_usuario_deslogado {
         gap: 0.5em;
-        top: 5em;
-        left: 48%;
     }
 
     .pop_up_usuario_deslogado h2 {
@@ -565,4 +646,28 @@ header {
         height: 2.7em;
 
     }
+
+     .pop_up_posicao_user_deslogado {
+        top: 4.5em;
+        left: 48%;
+    }
+
+
+    .pop_up_posicao_suporte {
+        top: 4.5em;
+        left: 30%;
+    }
+
+
+    .pop_up_posicao_carrinho {
+        top: 4.5em;
+        left: 38%;
+    }
+
+
+    .pop_up_posicao_menu_user {
+        top: 4.5em;
+        left: 48%;
+    }
+
 }

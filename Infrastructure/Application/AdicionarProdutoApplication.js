@@ -1,6 +1,6 @@
-import { Produto } from "../Entities/Produto.js"
-import { ValidarUsuario } from "../Validators/ValidarUsuario.js"
-import { AdicionarProdutoService } from "../Service/AdicionarProdutoService.js"
+import { Produto } from "../Entities/Produto.js";
+import { ValidarUsuario } from "../Validators/ValidarUsuario.js";
+import { AdicionarProdutoService } from "../Service/AdicionarProdutoService.js";
 
 const form = document.getElementById("form_adicionar_produto");
 const outputErroNome = document.getElementById('erro-nome');
@@ -19,16 +19,18 @@ form.addEventListener("submit", async (event) => {
     const nome = formData.get("nome");
     const preco = formData.get("preco");
     const categoria = formData.get("categoria");
-    const tamanho = formData.get("tamanho");
     const descricao_produto = formData.get("descricao_produto");
     const imagemFile = formData.get("imagem");
+
+    const tamanhoCheckboxes = document.querySelectorAll('input[name="tamanho"]:checked');
+    const tamanho = Array.from(tamanhoCheckboxes).map(checkbox => checkbox.value);
 
     const mensagemErroNome = ValidarUsuario.validarNome(nome);
     const mensagemErroPreco = ValidarUsuario.validarPreco(preco);
     const mensagemErroCategoria = ValidarUsuario.validarSelect(categoria);
-    const mensagemErroTamanho = ValidarUsuario.validarSelect(tamanho);
+    const mensagemErroTamanho = ValidarUsuario.validarArray(tamanho);
     const mensagemDescricaoProduto = ValidarUsuario.validarNome(descricao_produto);
-    const mensagemImagem = ValidarUsuario.validarImagem(imagemFile); //
+    const mensagemImagem = ValidarUsuario.validarImagem(imagemFile);
 
     outputErroNome.textContent = mensagemErroNome || '';
     outputErroPreco.textContent = mensagemErroPreco || '';
@@ -41,7 +43,6 @@ form.addEventListener("submit", async (event) => {
 
     if (temErro) return;
 
-    //  Converter imagem em array de bytes
     const imagemBytes = await new Promise((resolve, reject) => {
         const reader = new FileReader();
 
@@ -59,16 +60,14 @@ form.addEventListener("submit", async (event) => {
     });
 
 
-    const produto = new Produto(nome, descricao_produto, preco, categoria, imagemBytes);
+
+    const produto = new Produto(nome, descricao_produto, preco, categoria, imagemBytes,null, tamanho);
 
     try {
         await service.cadastrar(produto);
         alert("Produto cadastrado com sucesso!");
         form.reset();
 
-        setTimeout(() => {
-            window.location.href = "/index.html"; 
-        }, 2000);
     } catch (erro) {
         alert("Não foi possível concluir o cadastro do produto. Verifique sua conexão com a internet e tente novamente. Caso o problema persista, entre em contato com o suporte técnico.");
         console.error("Erro ao cadastrar produto:", erro);
