@@ -32,8 +32,8 @@ window.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('parcelamento').innerText = `Em até 3 vezes de R$  ${parcelamento(produto.precoUnitario.toFixed(2))}`;
     document.getElementById('descricao_produto').innerText = produto.descricao;
     document.getElementById('imagem_produto').src = imageUrl;
-
-    const tamanhosDisponiveis = 'P'
+    
+    const tamanhosDisponiveis = produto.tamanhos;
 
     document.querySelectorAll('.size-option').forEach(botao => {
       const tamanho = botao.innerText.trim();
