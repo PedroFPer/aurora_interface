@@ -1,5 +1,5 @@
 // http/httpClient.js
-import axios from "https://cdn.skypack.dev/axios";
+import axios from "axios";
 
 const axiosClient = axios.create({
   baseURL: 'http://localhost:8080',
