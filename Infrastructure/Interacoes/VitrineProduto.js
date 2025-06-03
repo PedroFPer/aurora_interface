@@ -1,4 +1,8 @@
 import { ProdutoConsumidorService } from "../Service/ProdutoConsumidorService.js";
+import { verificarPersistence } from "../Persistence/VerificarPersistence.js";
+
+
+const clienteInfo = verificarPersistence();
 
 window.addEventListener('DOMContentLoaded', async () => {
     const service = new ProdutoConsumidorService();
@@ -32,10 +36,19 @@ window.addEventListener('DOMContentLoaded', async () => {
             alert(`Erro ao carregar o produto ${n}: ${error.message}`);
         }
 
-        // Adiciona evento de clique ao produto
-        const pagina = `/pages/tela_produto_consumidor.html`;
+        let pagina;
+
+        if (
+            clienteInfo.userType === "employer" &&
+            (clienteInfo.cargo === "ADMINISTRADOR_GERAL" || clienteInfo.cargo === "GERENCIADOR_ROUPAS")
+        ) {
+            pagina = "/pages/employer.tela_edicao_produto.html";
+        } else {
+            pagina = "/pages/tela_produto_consumidor.html";
+        }
+
         produtoElement.addEventListener('click', () => {
-            const url = `${pagina}?id=${18 + n}`;
+            const url = `${pagina}?id=${27 + n}`;
             window.location.href = url;
         });
     }
