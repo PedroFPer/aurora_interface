@@ -47,11 +47,13 @@ window.addEventListener('DOMContentLoaded', async () => {
         descricao_produto.placeholder = produto.descricao;
         imagemProduto.src = imageUrl;
 
+
+
         //É resposável por adicionar a funcionalidade do input file no botão
-        let novaImagemFile = null; 
+        let novaImagemFile = null;
 
         btnArquivo.addEventListener('click', () => {
-            inputFile.click(); 
+            inputFile.click();
         });
 
         //É responsável por trocar a imagem atual pela nova e adicionar essa nova imagem em uma variavel.
@@ -59,7 +61,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             const file = inputFile.files[0];
             if (!file) return;
 
-            novaImagemFile = file; 
+            novaImagemFile = file;
 
             const reader = new FileReader();
             reader.onload = e => {
@@ -68,23 +70,32 @@ window.addEventListener('DOMContentLoaded', async () => {
             reader.readAsDataURL(file);
         });
 
-        const tamanhosDisponiveis = 'P' //Tem que ver com o banco de dados para puxar os tamanhos
+        const tamanhosDisponiveis = produto.tamanhos;
 
-        //É responsável pela interações entre os botões e armazenar os tamanhos em um array
-
-        selectTamanho.forEach(tamanhos => {
-            tamanhos.addEventListener('click', () => {
-                const tamanhosDisponiveis = tamanhos.textContent.trim();
-
-                if (tamanhosSelecionados.includes(tamanhosDisponiveis)) {
-                    tamanhos.classList.remove('active');
-                } else {
-                    tamanhos.classList.add('active');
-                }
-                console.log(tamanhosSelecionados);
-            });
+        document.querySelectorAll('.size-option').forEach(botao => {
+            const tamanho = botao.innerText.trim();
+            if (tamanhosDisponiveis.includes(tamanho)) {
+                botao.classList.add('active');
+            } else {
+                botao.classList.remove('active');
+            }
         });
 
+
+        const sizeButtons = document.querySelectorAll('.size-option');
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+
+                if (button.classList.contains('active')) {
+
+                    button.classList.remove('active');
+                } else {
+                    button.classList.add('active');
+                }
+                console.log();
+            });
+        });
 
 
     } catch (error) {

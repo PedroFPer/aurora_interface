@@ -14,6 +14,7 @@ function base64ToArrayBuffer(base64) {
   return Array.from(bytes);
 }
 
+
 const btnSalvarAlter = document.getElementById("btnSalvarAlter");
 
 if (btnSalvarAlter) {
@@ -45,13 +46,12 @@ if (btnSalvarAlter) {
     const nomeProdutoNovo = document.getElementById('titulo_produto').value.trim();
     const precoNovo = document.getElementById('preco_produto').value.trim();
     const descricaoNovo = document.getElementById('descricao_produto').value.trim();
+    const sizeButtons = document.querySelectorAll('.size-option');
+    const tamanhoNovo = [];
 
-    const selectTamanho = document.querySelectorAll('.size-option');
-    const arrayTamanhoNovo = [];
-
-    selectTamanho.forEach(t => {
-      if (t.classList.contains('active')) {
-        arrayTamanhoNovo.push(t.textContent.trim());
+    sizeButtons.forEach(button => {
+      if (button.classList.contains('active')) {
+        tamanhoNovo.push(button.textContent.trim());
       }
     });
 
@@ -66,11 +66,10 @@ if (btnSalvarAlter) {
     if (!imagemFileNovo) {
       imagemFinal = base64ToArrayBuffer(produto.imagem);
     } else {
-
       const mensagemErroImagem = ValidarUsuario.validarImagem(imagemFileNovo);
       outputErroImagem.textContent = mensagemErroImagem || "";
 
-       imagemFinal = await new Promise((resolve, reject) => {
+      imagemFinal = await new Promise((resolve, reject) => {
         const reader = new FileReader();
 
         reader.onload = () => {
@@ -118,23 +117,27 @@ if (btnSalvarAlter) {
     }
 
     // ----- TAMANHOS -----
-    if (arrayTamanhoNovo.length === 0) {
+    if (arraysSaoIguais(produto.tamanhos, tamanhoNovo)) {
       tamanhosFinal = produto.tamanhos || [];
     } else {
-      const mensagemErroTamanho = ValidarUsuario.validarArray(arrayTamanhoNovo);
+      const mensagemErroTamanho = ValidarUsuario.validarArray(tamanhoNovo);
       outputErroSelectTamanho.textContent = mensagemErroTamanho || "";
       if (mensagemErroTamanho) return;
-      tamanhosFinal = arrayTamanhoNovo;
+      tamanhosFinal = tamanhoNovo;
     }
 
+    console.table(tamanhosFinal);
+
+    // Criação do objeto Produto atualizado
     const produtoAtualizado = new Produto(
       nomeFinal,
       descricaoFinal,
       precoFinal,
       produto.categoria,
       imagemFinal,
-      produtoId
-      //tamanhosFinal
+      produtoId,
+      tamanhosFinal
+
     );
 
     console.log(produtoAtualizado);
@@ -148,4 +151,11 @@ if (btnSalvarAlter) {
       console.error(erro);
     }
   });
+}
+
+
+function arraysSaoIguais(arr1, arr2) {
+  if (arr1.length !== arr2.length) return false;
+
+  return arr1.every(item => arr2.includes(item));
 }

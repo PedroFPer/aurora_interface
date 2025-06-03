@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('descricao_produto').innerText = produto.descricao;
     document.getElementById('imagem_produto').src = imageUrl;
 
-    const tamanhosDisponiveis = 'P'
+    const tamanhosDisponiveis = produto.tamanhos;
 
     document.querySelectorAll('.size-option').forEach(botao => {
       const tamanho = botao.innerText.trim();
