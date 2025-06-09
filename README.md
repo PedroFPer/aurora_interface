@@ -1,20 +1,21 @@
-#Aurora Interface
-Este projeto foi desenvolvido para a disciplina de Desenvolvimento de Sistemas e consiste na criação de um site de e-commerce de roupas com uma arquitetura fullstack, incluindo integração com APIs e banco de dados.
+# Aurora Interface
 
-#Tecnologias Utilizadas
-Frontend
-HTML, CSS, JavaScript: Linguagens principais para a construção da interface do usuário.
+Este projeto foi desenvolvido para a disciplina de **Desenvolvimento de Sistemas** e consiste na criação de um site de e-commerce de roupas, utilizando uma arquitetura fullstack com integração de APIs e banco de dados.
 
-Bootstrap: Única biblioteca utilizada para agilizar o desenvolvimento responsivo e estilização.
+## Tecnologias Utilizadas
 
-#Backend
-Kotlin: Linguagem principal para a aplicação de backend.
+### Frontend
+- **HTML**, **CSS**, **JavaScript**: Linguagens principais para a construção da interface do usuário.
+- **Bootstrap**: Biblioteca utilizada para estilização e desenvolvimento responsivo.
 
-Spring Boot: Framework utilizado para criar APIs RESTful e gerenciar as operações do lado do servidor.
+### Backend
+- **Kotlin**: Linguagem principal da aplicação backend.
+- **Spring Boot**: Framework utilizado para construir APIs RESTful e gerenciar operações no servidor.
 
-#Banco de Dados
-MySQL: Gerenciador de banco de dados utilizado para armazenamento e manipulação de dados.
+### Banco de Dados
+- **MySQL**: Gerenciador de banco de dados usado para armazenamento e manipulação de dados.
 
-#Teste o Projeto
-A aplicação backend necessária para o funcionamento do sistema pode ser encontrada no repositório a seguir:
-Aurora Backend
+## Teste o Projeto
+
+A aplicação backend necessária para o funcionamento do sistema pode ser encontrada no repositório a seguir:  
+[**Aurora Backend**](https://github.com/PedroFPer/Aurora_BackEnd.git)
